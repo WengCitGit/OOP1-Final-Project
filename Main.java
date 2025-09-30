@@ -20,12 +20,16 @@ public class Main{
         System.out.println("██████████████████████████████████████████████████████████████████████████████████║");
         System.out.println("  ╚═══════════════════════════════════════════════════════════════════════════════╝");
        
+        System.out.println();
+        System.out.println();
 
-        System.out.println("*****************************************************************");
-        System.out.println("*            Welcome to the Battle of the Mascots,              *");
-        System.out.println("*     a turn-based RPG-style game where restaurant mascots      *");
-        System.out.println("*    and special characters battle using food-themed attacks.   *");
-        System.out.println("*****************************************************************");
+        System.out.println("     ************************************************************************");
+        System.out.println("     ************************************************************************");
+        System.out.println("     **              Welcome to the Battle of the Mascots,                 **");
+        System.out.println("     **        a turn-based RPG-style game where restaurant mascots        **");
+        System.out.println("     **      and special characters battle using food-themed attacks.      **");
+        System.out.println("     ************************************************************************");
+        System.out.println("     ************************************************************************");
         System.out.println();
         System.out.println();
         System.out.println("Goal: Reduce your opponent’s HP to 0 using strategy, skills, and combos.");
