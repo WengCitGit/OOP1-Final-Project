@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main{
 
@@ -34,7 +34,7 @@ public class Main{
         System.out.println("     ************************************************************************");
         System.out.println();
         System.out.println();
-        System.out.println("Goal: Reduce your opponent’s HP to 0 using strategy, skills, and combos.");
+        System.out.println("     Goal: Reduce your opponent’s HP to 0 using strategy, skills, and combos.");
         System.out.println();
         System.out.println();
         System.out.println();
@@ -42,6 +42,10 @@ public class Main{
         System.out.println("1. Player vs Player (PVP)");
         System.out.println("2. Player vs Computer (PVC)");
         System.out.println("3. Arcade Mode");
+
+        System.out.println();
+        System.out.print("Enter gamemode (1 - 3): ");
+        int gameMode = scan.nextInt();
 
 
     }
