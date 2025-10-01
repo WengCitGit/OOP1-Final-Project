@@ -22,7 +22,7 @@ public class Main{
        
         System.out.println();
         System.out.println("Press ENTER to begin...");
-        sc.nextLine();
+        scan.nextLine();
         System.out.println();
 
         System.out.println("     ************************************************************************");
@@ -68,9 +68,7 @@ public class Main{
         int character = scan.nextInt();
         scan.nextLine();
 
-        System.out.println();
-        System.out.print("Enter gamemode (1 - 3): ");
-        int gameMode = scan.nextInt();
+       
 
 
     }
