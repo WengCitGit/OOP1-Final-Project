@@ -46,9 +46,9 @@ abstract class Character extends Gamemode
     
     public abstract void basicAttack(Character target);
     
-    public abstract void skillAttack(Character target);
+    public abstract void secondarySkill(Character target);
     
-    public abstract void ultimateAttack(Character target);
+    public abstract void ultimateSkill(Character target);
     
     //method to take damage
     public void takeDamage(int damage) 
