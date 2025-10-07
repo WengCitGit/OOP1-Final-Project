@@ -10,9 +10,9 @@ public class CharacterSelector {
         System.out.println("=================================================*");
         System.out.println("*  1. Jollibee - Crispy Joy Bringer              *");
         System.out.println("*  2. McDo - Big Mac Basher                      *");
-        System.out.println("*  3. KFC - Colonel’s Drumstick Duelist          *");
+        System.out.println("*  3. KFC - Colonel's Drumstick Duelist          *");
         System.out.println("*  4. Burger King - Flame Griller                *");
-        System.out.println("*  5. Wendy’s - Sassy Red Fighter                *");
+        System.out.println("*  5. Wendy's - Sassy Red Fighter                *");
         System.out.println("*  6. Jack in the Box - Trickster Clown          *");
         System.out.println("*  7. Little Caesars - Pizza Gladiator           *");
         System.out.println("*  8. Chief Khai - Whistle Warrior               *");
@@ -48,5 +48,24 @@ public class CharacterSelector {
             case 8 -> { return new ChiefKhai(); }
             default -> { return new Jollibee(); }
         }
+    
     }
+
+    public characters.Character chooseRandomCharacter() {
+        int choice = 1 + (int)(Math.random() * 8); // Random number between 1 and 8
+
+        switch (choice) {
+            case 1 -> { return new Jollibee(); }
+            case 2 -> { return new McDonalds(); }
+            case 3 -> { return new KFC(); }
+            case 4 -> { return new BurgerKing(); }
+            case 5 -> { return new Wendys(); }
+            case 6 -> { return new JackInTheBox(); }
+            case 7 -> { return new LittleCaesars(); }
+            case 8 -> { return new ChiefKhai(); }
+            default -> { return new Jollibee(); }
+        }
+    }
+
+    
 }

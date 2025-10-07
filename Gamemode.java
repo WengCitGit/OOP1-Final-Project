@@ -1,5 +1,5 @@
 import characters.*; 
-import java.util.Scanner;
+import java.util.*;
 import battle.Battle; // Replace 'your.package' with the actual package name where Battle.java is located
 
 public class GameMode {
@@ -13,6 +13,10 @@ public class GameMode {
         System.out.println("\nPlayer 2, choose your character:");
         characters.Character player2 = selector.chooseCharacter();
 
+        System.out.println("#####################################################################");
+        System.out.println("       Player 1: " + player1.getName() + " VS Player 2: " + player2.getName());
+        System.out.println("#####################################################################");
+
         Battle battle = new Battle(player1, player2);
         battle.start();
     }
@@ -23,7 +27,11 @@ public class GameMode {
         CharacterSelector selector = new CharacterSelector();
         characters.Character player1 = selector.chooseCharacter();
 
-        characters.Character enemy = new McDonalds(); // or randomize later
+        characters.Character enemy = selector.chooseRandomCharacter(); // or randomize later
+
+        System.out.println("#####################################################################");
+        System.out.println("       Player 1: " + player1.getName() + " VS Computer: " + enemy.getName());
+        System.out.println("#####################################################################");
 
         Battle battle = new Battle(player1, enemy);
         battle.start();

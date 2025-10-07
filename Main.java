@@ -72,7 +72,17 @@ public class Main{
         }
 
         System.out.println();
-        System.out.println("You choose mode " + mode + ".");
+        System.out.print("You choose " + mode + ".");
+        switch (mode) {
+            case 1 : System.out.println(" Player vs Player Mode.");
+                break;
+            case 2 : System.out.println(" Player vs Computer Mode.");                  
+                break;
+            case 3 : System.out.println(" Arcade Mode.");
+                break;
+            default : System.out.println(" Invalid mode.");
+        }
+
         System.out.println();
 
         //START GAME
