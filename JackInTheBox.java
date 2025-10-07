@@ -1,25 +1,25 @@
 public class JackInTheBox extends Character{
     public JackInTheBox() 
     {
-        super("Jack In The Box", 120, 80, 15); //character name, hp, mana, mana regen
+        super("Jack In The Box", 165, 60, 0); //character name, hp, mana, mana regen
     }
 
     @Override
     public void basicAttack(Character target) 
     {
-        performAttack(target, 10, 15, 0, "basic"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 11, 16, 0, "Giant Headbutt Express"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void secondarySkill(Character target) 
     {
-        performAttack(target, 20, 25, 20, "skill"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 15, 24, 20, "Drive-Thru Confusion"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void ultimateSkill(Character target) 
     {
-        performAttack(target, 40, 50, 50, "ult"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 24, 60, 50, "Titanic Jumbo Jack Combo"); //target name, min dmg, max dmg, mana cost
     }
     
     

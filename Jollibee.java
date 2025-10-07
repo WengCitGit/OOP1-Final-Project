@@ -1,25 +1,25 @@
 public class Jollibee extends Character{
     public Jollibee() 
     {
-        super("Jollibee", 120, 80, 15); //character name, hp, mana, mana regen
+        super("Jollibee", 150, 60, 15); //character name, hp, mana, mana regen
     }
 
     @Override
     public void basicAttack(Character target) 
     {
-        performAttack(target, 10, 15, 0, "basic"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 10, 16, 0, "Juicylicious Crispy Chicken Joy Slam"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void secondarySkill(Character target) 
     {
-        performAttack(target, 20, 25, 20, "skill"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 14, 20, 12, "Langhap Sarap Aura"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void ultimateSkill(Character target) 
     {
-        performAttack(target, 40, 50, 50, "ult"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 24, 55, 25, "Super Meal Combo Domination"); //target name, min dmg, max dmg, mana cost
     }
     
     

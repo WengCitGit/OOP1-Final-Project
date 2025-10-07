@@ -1,25 +1,25 @@
 public class LittleCaesars extends Character{
     public LittleCaesars() 
     {
-        super("Little Caesars", 120, 80, 15); //character name, hp, mana, mana regen
+        super("Little Caesars", 185, 55, 0); //character name, hp, mana, mana regen
     }
 
     @Override
     public void basicAttack(Character target) 
     {
-        performAttack(target, 10, 15, 0, "basic"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 12, 18, 0, "Hot-N-Ready Slam"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void secondarySkill(Character target) 
     {
-        performAttack(target, 20, 25, 20, "skill"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 18, 26, 15, "Crazy Bread Barrage"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
     public void ultimateSkill(Character target) 
     {
-        performAttack(target, 40, 50, 50, "ult"); //target name, min dmg, max dmg, mana cost
+        performAttack(target, 30, 62, 25, "Deep! Deep! Dish Catastrophe"); //target name, min dmg, max dmg, mana cost
     }
     
     
