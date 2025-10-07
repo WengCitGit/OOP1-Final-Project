@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Main{
@@ -41,33 +41,34 @@ public class Main{
 
 
         //choose gamemode
-        int mode;
-        while(true) {
-            System.out.println("Choose your gamemode:");
-            System.out.println("==================================");
-            System.out.println("*  1. Player vs Player (PVP)     *");
-            System.out.println("*  2. Player vs Computer (PVC)   *");
-            System.out.println("*  3. Arcade Mode                *");
-            System.out.println("==================================");
-            System.out.print("Enter choice (1-3): ");
+        int mode = 0;
+        boolean isEnabledMode = true;
 
-
-            if (scan.hasNextInt()) {
-                mode = scan.nextInt();
+        while(isEnabledMode) {
+            try {
+                System.out.println("Choose your gamemode:");
+                System.out.println("==================================");
+                System.out.println("*  1. Player vs Player (PVP)     *");
+                System.out.println("*  2. Player vs Computer (PVC)   *");
+                System.out.println("*  3. Arcade Mode                *");
+                System.out.println("==================================");
+                System.out.print("Enter choice (1-3): ");
+                mode = Integer.parseInt(scan.nextLine());
 
                 if (mode >= 1 && mode <= 3) {
-                    break;
+                    isEnabledMode = false;
                 } else {
                     System.out.println();
                     System.out.println("Invalid number! Please enter between 1 and 3.");
                     System.out.println();
                 }
-            } else {
+            } catch (NumberFormatException e) {
                 System.out.println();
+                System.out.println("Error: " + e.getMessage());
                 System.out.println("Invalid input! Numbers only.");
                 System.out.println();
-                scan.next();
             }
+            
         }
 
         System.out.println();
