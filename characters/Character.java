@@ -1,7 +1,8 @@
-import java.util.Random;
+package characters;
+
 import java.util.*;
 
-abstract class Character extends Gamemode 
+public abstract class Character 
 {
 
     private String name;

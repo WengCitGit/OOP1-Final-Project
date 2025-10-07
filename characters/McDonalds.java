@@ -1,3 +1,4 @@
+package characters;
 public class McDonalds extends Character{
     public McDonalds() 
     {

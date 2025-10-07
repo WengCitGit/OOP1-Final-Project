@@ -1,3 +1,4 @@
+package characters;
 public class JackInTheBox extends Character{
     public JackInTheBox() 
     {

@@ -1,7 +1,9 @@
-public class Guard extends Character{
-    public Guard() 
+package characters;
+public class ChiefKhai extends Character{
+
+    public ChiefKhai() 
     {
-        super("Guard", 200, 75, 0); //character name, hp, mana, mana regen
+        super("Chief Khai", 200, 75, 0); //character name, hp, mana, mana regen
     }
 
     @Override

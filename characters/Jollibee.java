@@ -1,3 +1,4 @@
+package characters;
 public class Jollibee extends Character{
     public Jollibee() 
     {

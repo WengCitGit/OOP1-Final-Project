@@ -1,3 +1,4 @@
+package characters;
 public class LittleCaesars extends Character{
     public LittleCaesars() 
     {

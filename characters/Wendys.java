@@ -1,3 +1,4 @@
+package characters;
 public class Wendys extends Character{
     public Wendys() 
     {

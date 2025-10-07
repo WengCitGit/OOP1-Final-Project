@@ -76,19 +76,19 @@ public class Main{
         System.out.println();
 
         //START GAME
-        //Game game = new Game();
+        GameMode game = new GameMode();
         switch(mode) {
             case 1:
                 System.out.println("--------------------Starting PVP MODE--------------------");
-                //game.startPVP();  // start PVP mode
+                game.startPVP();  // start PVP mode
                 break;
             case 2:
                 System.out.println("--------------------Starting PVC MODE--------------------");
-                //game.startPVC();  // start Player vs Computer
+                game.startPVC();  // start Player vs Computer
                 break;
             case 3:
                 System.out.println("--------------------Starting ARCADE MODE--------------------");
-                //game.startArcade();  // start Arcade Mode
+                game.startArcade();  // start Arcade Mode
                 break;
             default:
                 System.out.println("Invalid mode selected!");

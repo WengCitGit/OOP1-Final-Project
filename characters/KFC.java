@@ -1,3 +1,4 @@
+package characters;
 public class KFC extends Character{
     public KFC() 
     {
