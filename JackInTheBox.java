@@ -11,13 +11,13 @@ public class JackInTheBox extends Character{
     }
 
     @Override
-    public void skillAttack(Character target) 
+    public void secondarySkill(Character target) 
     {
         performAttack(target, 20, 25, 20, "skill"); //target name, min dmg, max dmg, mana cost
     }
 
     @Override
-    public void ultimateAttack(Character target) 
+    public void ultimateSkill(Character target) 
     {
         performAttack(target, 40, 50, 50, "ult"); //target name, min dmg, max dmg, mana cost
     }
