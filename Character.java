@@ -35,13 +35,13 @@ abstract class Character extends Gamemode
     {
         if (this.currMana < manaCost) 
         {
-            //Add text here
+            System.out.println(this.name+" does not have enough mana for "+skillName+"! (Costs "+manaCost+", has "+this.currMana+")");
             return;
         }
         this.currMana -= manaCost;
         int damage = minDamage + this.random.nextInt(maxDamage - minDamage + 1);
         target.takeDamage(damage);
-        System.out.println(this.name + " uses " + skillName + " and deals " + damage + " damage to " + target.name + "!");
+        System.out.println(this.name+" uses "+skillName+" and deals "+damage+" damage to "+target.name+"!");
     }
     
     public abstract void basicAttack(Character target);
@@ -58,7 +58,7 @@ abstract class Character extends Gamemode
             this.hp = 0;
         }
     }
-    
+
     //check if char is alive
     public boolean isAlive() 
     {
