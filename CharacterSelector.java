@@ -5,8 +5,22 @@ import java.util.Scanner;
 public class CharacterSelector {
     private Scanner scan = new Scanner(System.in);
 
+    private final String[] names = {
+
+            "Jollibee - Crispy Joy Bringer ",
+            "McDo - Big Mac Basher",
+            "KFC - Colonel's Drumstick Duelist",
+            "Burger King - Flame Griller",
+            "Wendy's - Sassy Red Fighter",
+            "Jack in the Box - Trickster Clown",
+            "Little Caesars - Pizza Gladiator",
+            "Chief Khai - Whistle Warrior"
+
+    };
+
     public characters.Character chooseCharacter() {
         int choice = 0;
+
         System.out.println("=================================================*");
         System.out.println("*  1. Jollibee - Crispy Joy Bringer              *");
         System.out.println("*  2. McDo - Big Mac Basher                      *");
@@ -34,26 +48,32 @@ public class CharacterSelector {
         }
 
         System.out.println();
-        System.out.println("You chose character " + choice + ".");
+        System.out.println("You chose character " + choice + ". " + names[choice - 1] + ".");
         System.out.println();
 
-        switch (choice) {
-            case 1 -> { return new Jollibee(); }
-            case 2 -> { return new McDonalds(); }
-            case 3 -> { return new KFC(); }
-            case 4 -> { return new BurgerKing(); }
-            case 5 -> { return new Wendys(); }
-            case 6 -> { return new JackInTheBox(); }
-            case 7 -> { return new LittleCaesars(); }
-            case 8 -> { return new ChiefKhai(); }
-            default -> { return new Jollibee(); }
-        }
+        characters.Character chosen = createCharacter(choice);
+        chosen.setName(names[choice - 1]);
+        return chosen;
+
     
     }
 
     public characters.Character chooseRandomCharacter() {
+
         int choice = 1 + (int)(Math.random() * 8); // Random number between 1 and 8
 
+        System.out.println();
+        System.out.println("Computer has selected character " + choice + ". " + names[choice - 1] + ".");
+        System.out.println();
+
+        characters.Character chosen = createCharacter(choice);
+        chosen.setName(names[choice - 1]); // ✅ update name to include title
+        return chosen;
+
+    }
+
+    private characters.Character createCharacter(int choice){
+        
         switch (choice) {
             case 1 -> { return new Jollibee(); }
             case 2 -> { return new McDonalds(); }
@@ -69,3 +89,5 @@ public class CharacterSelector {
 
     
 }
+
+

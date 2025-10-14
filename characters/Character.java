@@ -86,4 +86,9 @@ public abstract class Character
     {
         return this.maxMana;
     }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }

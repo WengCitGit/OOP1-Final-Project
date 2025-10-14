@@ -46,7 +46,7 @@ public class Main{
 
         while(isEnabledMode) {
             try {
-                System.out.println("Choose your gamemode:");
+                System.out.println("        Choose your gamemode:");
                 System.out.println("==================================");
                 System.out.println("*  1. Player vs Player (PVP)     *");
                 System.out.println("*  2. Player vs Computer (PVC)   *");
@@ -72,7 +72,7 @@ public class Main{
         }
 
         System.out.println();
-        System.out.print("You choose " + mode + ".");
+        System.out.print("You chose Option " + mode + ".");
         switch (mode) {
             case 1 : System.out.println(" Player vs Player Mode.");
                 break;
