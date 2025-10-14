@@ -29,9 +29,9 @@ public class GameMode {
 
         characters.Character enemy = selector.chooseRandomCharacter(); // or randomize later
 
-        System.out.println("#####################################################################");
+        System.out.println("##########################################################################################");
         System.out.println("       Player 1: " + player1.getName() + " VS Computer: " + enemy.getName());
-        System.out.println("#####################################################################");
+        System.out.println("##########################################################################################");
 
         Battle battle = new Battle(player1, enemy);
         battle.start();
