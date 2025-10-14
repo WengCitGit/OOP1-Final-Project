@@ -13,9 +13,9 @@ public class GameMode {
         System.out.println("\nPlayer 2, choose your character:");
         characters.Character player2 = selector.chooseCharacter();
 
-        System.out.println("#####################################################################");
+        System.out.println("##########################################################################################");
         System.out.println("       Player 1: " + player1.getName() + " VS Player 2: " + player2.getName());
-        System.out.println("#####################################################################");
+        System.out.println("##########################################################################################");
 
         Battle battle = new Battle(player1, player2);
         battle.start();

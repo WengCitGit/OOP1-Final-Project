@@ -72,6 +72,7 @@ public class Main{
         }
 
         System.out.println();
+        
         System.out.print("You chose Option " + mode + ".");
         switch (mode) {
             case 1 : System.out.println(" Player vs Player Mode.");
