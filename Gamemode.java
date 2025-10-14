@@ -1,6 +1,6 @@
 import characters.*; 
 import java.util.*;
-import battle.Battle; // Replace 'your.package' with the actual package name where Battle.java is located
+import battle.Battle; 
 
 public class GameMode {
 
