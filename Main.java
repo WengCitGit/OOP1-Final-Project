@@ -35,7 +35,7 @@ public class Main{
         System.out.println("     ************************************************************************");
         System.out.println();
         System.out.println();
-        System.out.println("Goal: Reduce your opponent’s HP to 0 using strategy, skills, and combos.");
+        System.out.println("Goal: Reduce your opponent's HP to 0 using strategy, skills, and combos.");
         System.out.println();
         System.out.println();
 
