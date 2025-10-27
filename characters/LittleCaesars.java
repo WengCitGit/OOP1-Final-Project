@@ -2,7 +2,7 @@ package characters;
 public class LittleCaesars extends Character{
     public LittleCaesars() 
     {
-        super("Little Caesars", 185, 55, 0); //character name, hp, mana, mana regen
+        super("Little Caesars", 185, 55, 0, "Hot-N-Ready Slam", "Crazy Bread Barrage", "Deep! Deep! Dish Catastrophe"); //character name, hp, mana, mana regen
     }
 
     @Override

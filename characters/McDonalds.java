@@ -2,7 +2,7 @@ package characters;
 public class McDonalds extends Character{
     public McDonalds() 
     {
-        super("McDonalds", 160, 55, 15); //character name, hp, mana, mana regen
+        super("McDonalds", 160, 55, 15, "Frosty McFlurry Blast", "Crispy BFF Fries Fury", "Colossal BIG MAC Slam"); //character name, hp, mana, mana regen
     }
 
     @Override

@@ -2,7 +2,7 @@ package characters;
 public class JackInTheBox extends Character{
     public JackInTheBox() 
     {
-        super("Jack In The Box", 165, 60, 0); //character name, hp, mana, mana regen
+        super("Jack In The Box", 165, 60, 0, "Giant Headbutt Express", "Drive-Thru Confusion", "Titanic Jumbo Jack Combo"); //character name, hp, mana, mana regen
     }
 
     @Override

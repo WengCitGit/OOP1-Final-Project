@@ -3,7 +3,7 @@ public class ChiefKhai extends Character{
 
     public ChiefKhai() 
     {
-        super("Chief Khai", 200, 75, 0); //character name, hp, mana, mana regen
+        super("Chief Khai", 200, 75, 0, "Batuta Bonk", "Pakibukas ng bag","Mega Whistle Shockwave"); //character name, hp, mana, mana regen
     }
 
     @Override

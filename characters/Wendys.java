@@ -2,7 +2,7 @@ package characters;
 public class Wendys extends Character{
     public Wendys() 
     {
-        super("Wendys", 175, 65, 0); //character name, hp, mana, mana regen
+        super("Wendys", 175, 65, 0, "Sassy Roast", "Vanilla Vengeance", "Order Blocker"); //character name, hp, mana, mana regen
     }
 
     @Override

@@ -2,7 +2,7 @@ package characters;
 public class KFC extends Character{
     public KFC() 
     {
-        super("Kentucky Fried Chicken", 155, 60, 3); //character name, hp, mana, mana regen
+        super("Kentucky Fried Chicken", 155, 60, 3, "DrumStick Smash", "Shooting Flaming Hotshot", "Secret Sauce Overload"); //character name, hp, mana, mana regen
     }
 
     @Override

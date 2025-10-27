@@ -2,7 +2,7 @@ package characters;
 public class Jollibee extends Character{
     public Jollibee() 
     {
-        super("Jollibee", 150, 60, 15); //character name, hp, mana, mana regen
+        super("Jollibee", 150, 60, 15, "Juicylicious Crispy Chicken Joy Slam", "Langhap Sarap Aura", "Super Meal Combo Domination"); //character name, hp, mana, mana regen
     }
 
     @Override

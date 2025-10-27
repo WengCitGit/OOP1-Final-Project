@@ -13,8 +13,12 @@ public abstract class Character
     private int regenMana;
     private Random random;
     
+    private String basicSkillName;
+    private String secondarySkillName;
+    private String ultimateSkillName;
+
     //constructor
-    public Character(String name, int maxHp, int maxMana, int regenMana)
+    public Character(String name, int maxHp, int maxMana, int regenMana, String basicSkillName, String secondarySkillName, String ultimateSkillName)
     {
     this.name = name;
     this.maxHp = maxHp;
@@ -23,6 +27,12 @@ public abstract class Character
     this.currMana = maxMana;
     this.regenMana = regenMana;
     this.random = new Random();
+
+    this.basicSkillName = basicSkillName;
+    this.secondarySkillName = secondarySkillName;
+    this.ultimateSkillName = ultimateSkillName;
+
+
     }
     
     //method for regen mana
@@ -65,6 +75,21 @@ public abstract class Character
     {
         return this.hp > 0;
     }
+
+
+    //skill names getters para sa battle
+    public String getBasicSkillName() {
+        return this.basicSkillName;
+    }
+    
+    public String getSecondarySkillName() {
+        return this.secondarySkillName;
+    }
+    
+    public String getUltimateSkillName() {
+        return this.ultimateSkillName;
+    }
+
     //getters
     public String getName()
     {

@@ -2,7 +2,7 @@ package characters;
 public class BurgerKing extends Character{
     public BurgerKing() 
     {
-        super("Burger King", 165, 60, 3); //character name, hp, mana, mana regen
+        super("Burger King", 165, 60, 3, "Whopper Flame", "Onion Ring Shockwave", "Flame-Grilled Feast"); //character name, hp, mana, mana regen
     }
 
     @Override

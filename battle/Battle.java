@@ -39,7 +39,7 @@ public class Battle {
         // main battle loop
         while (player1.isAlive() && player2.isAlive()) {
             System.out.println("\n============================");
-            System.out.println(" TURN " + turn);
+            System.out.println("              TURN " + turn);
             System.out.println("============================");
 
             Character current, opponent;
@@ -89,9 +89,15 @@ public class Battle {
 
     private int chooseMove(Scanner scanner, Character player) {
         System.out.println("Choose a move:");
-        System.out.println("[1] Basic Attack");
-        System.out.println("[2] Secondary Skill");
-        System.out.println("[3] Ultimate Skill");
+
+        String basicSkillName = player.getBasicSkillName();
+        String secondarySkillName = player.getSecondarySkillName();
+        String ultimateSkillName = player.getUltimateSkillName();
+
+
+        System.out.println("[1] Basic Attack - " + basicSkillName);
+        System.out.println("[2] Secondary Skill - " + secondarySkillName);
+        System.out.println("[3] Ultimate Skill - " + ultimateSkillName);
         System.out.print("Enter your choice: ");
         int choice;
         try {
@@ -105,23 +111,23 @@ public class Battle {
 
     private void performMoveWithBanner(Character attacker, Character defender, int move) {
         int beforeHP = defender.getHealth();
-        String moveName;
+        String moveBannerName;
 
         switch (move) {
             case 1:
-                moveName = "Basic Attack";
+                moveBannerName = attacker.getBasicSkillName();
                 attacker.basicAttack(defender);
                 break;
             case 2:
-                moveName = "Secondary Skill";
+                moveBannerName = attacker.getSecondarySkillName();
                 attacker.secondarySkill(defender);
                 break;
             case 3:
-                moveName = "Ultimate Skill";
+                moveBannerName = attacker.getUltimateSkillName();
                 attacker.ultimateSkill(defender);
                 break;
             default:
-                moveName = "Basic Attack";
+                moveBannerName = attacker.getBasicSkillName();;
                 attacker.basicAttack(defender);
                 break;
         }
@@ -129,7 +135,7 @@ public class Battle {
         int damage = Math.max(0, beforeHP - defender.getHealth());
 
         System.out.println("\n══════════════════════════════════════════════════");
-        System.out.println(" " + attacker.getName() + " used " + moveName + "!");
+        System.out.println(" " + attacker.getName() + " used " + moveBannerName + "!");
         if (damage > 0) {
             System.out.println(" " + defender.getName() + " took " + damage + " damage!");
         } else {
@@ -139,7 +145,7 @@ public class Battle {
     }
 
     private void showStats() {
-        System.out.println("\n******************--- STATUS ---******************");
+        System.out.println("\n******************--- STATUS ---*********************");
         System.out.println(player1.getName() + ": HP " + player1.getHealth() + "/" + player1.getMaxHealth() +
                 " | Mana " + player1.getCurrentMana() + "/" + player1.getMaxMana());
         System.out.println(player2.getName() + ": HP " + player2.getHealth() + "/" + player2.getMaxHealth() +
