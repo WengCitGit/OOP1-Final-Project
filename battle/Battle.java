@@ -97,7 +97,7 @@ public class Battle {
         try {
             choice = scanner.nextInt();
         } catch (Exception e) {
-            scanner.nextLine(); // clear invalid input
+            scanner.nextLine(); 
             choice = 1;
         }
         return choice;
