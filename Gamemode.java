@@ -21,21 +21,21 @@ public class GameMode {
         battle.start();
     }
 
-        public void startPVC() {
+    public void startPVC() {
         System.out.println("\n--- PLAYER VS COMPUTER MODE ---");
 
         CharacterSelector selector = new CharacterSelector();
         characters.Character player1 = selector.chooseCharacter();
-
-        characters.Character enemy = selector.chooseRandomCharacter(); // or randomize later
+        characters.Character enemy = selector.chooseRandomCharacter();
 
         System.out.println("##########################################################################################");
         System.out.println("       Player 1: " + player1.getName() + " VS Computer: " + enemy.getName());
         System.out.println("##########################################################################################");
 
-        Battle battle = new Battle(player1, enemy);
+        Battle battle = new Battle(player1, enemy, true); // <-- FIXED HERE
         battle.start();
     }
+
 
     public void startArcade() {
         System.out.println("\n--- ARCADE MODE ---");
