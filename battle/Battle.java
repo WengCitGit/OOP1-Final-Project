@@ -38,9 +38,9 @@ public class Battle {
 
         // main battle loop
         while (player1.isAlive() && player2.isAlive()) {
-            System.out.println("\n============================");
-            System.out.println("              TURN " + turn);
-            System.out.println("============================");
+            System.out.println();
+            System.out.println("----------------- TURN " + turn + " -----------------"  );
+            System.out.println();
 
             Character current, opponent;
 
@@ -78,13 +78,15 @@ public class Battle {
         }
 
         // end of battle
-        System.out.println("\n══════════════════════════════════════════════════");
+        System.out.println("\n──────────────────────── END ────────────────────────");
+        System.out.println();
         if (player1.isAlive()) {
             System.out.println(" PLAYER 1 (" + player1.getName() + ") WINS!");
         } else {
             System.out.println(" PLAYER 2 (" + player2.getName() + ") WINS!");
         }
-        System.out.println("══════════════════════════════════════════════════");
+        System.out.println();
+        System.out.println("───── ────── ────── ────── ────── ────── ────── ────── ");
     }
 
     private int chooseMove(Scanner scanner, Character player) {
@@ -134,14 +136,14 @@ public class Battle {
 
         int damage = Math.max(0, beforeHP - defender.getHealth());
 
-        System.out.println("\n══════════════════════════════════════════════════");
-        System.out.println(" " + attacker.getName() + " used " + moveBannerName + "!");
+        System.out.println("\n");
+        System.out.println("^ " + attacker.getName() + " used " + moveBannerName + "!");
         if (damage > 0) {
-            System.out.println(" " + defender.getName() + " took " + damage + " damage!");
+            System.out.println("^ " + defender.getName() + " took " + damage + " damage!");
         } else {
-            System.out.println(" " + defender.getName() + " dodged the attack!");
+            System.out.println("^ " + defender.getName() + " dodged the attack!");
         }
-        System.out.println("══════════════════════════════════════════════════");
+        System.out.println("");
     }
 
     private void showStats() {
