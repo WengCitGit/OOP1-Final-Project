@@ -40,5 +40,9 @@
         public void startArcade() {
             System.out.println("\n--- ARCADE MODE ---");
             System.out.println("Coming soon! Fight random mascots in a survival streak!");
+            System.out.println("Deathmatch against random characters until you lose!");
+            System.out.println("Defeat as many as you can!");
+            System.out.println("Replace the boss with your own character!");
+           
         }
     }
