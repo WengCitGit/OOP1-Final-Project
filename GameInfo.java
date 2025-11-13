@@ -38,9 +38,42 @@ public class GameInfo {
     private void showMainStory() {
         System.out.println("\n--- MAIN STORY ---");
         System.out.println("""
-        In a world where mascots fight for their schools,
-        peace was shattered when a mysterious force corrupted some of them.
-        Brave students must summon their champions to restore balance!
+
+         ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    ()==(                                  O  R I G I N S   O F    T H E    F E U D                                 (@==()
+         '__________________________________________________________________________________________________________'|
+            |                                                                                                        |
+            |                                                                                                        |
+            |                                                                                                        |
+            |    In a world where fast food mascots are more than mere icons, an invisible storm brews.              |
+            |    Rivalries spark, alliances form, and battles erupt across cities, kitchens, and                     |
+            |    abandoned amusement parks. Once symbols of joy and comfort, the mascots are now drawn               |
+            |    into a mysterious competition—where the stakes are higher than fries, chicken, or pizza.            |
+            |                                                                                                        |       
+            |    The orphanage, once a sanctuary of warmth and discipline under Colonel KFC and his wife,            |
+            |    has become a central beacon for these heroes. Each mascot has a connection—whether as a             |
+            |    former child, caretaker, or wandering ally—tying them together in a fragile network of              |
+            |    trust. Yet even as they fight, something unseen watches from the shadows, twisting events           |
+            |    and bending the rules.                                                                              |
+            |                                                                                                        |
+            |    Rumors whisper through arenas and kitchens: strange glitches, masked figures, and vanishing         |
+            |    messages. The heroes sense it—a presence orchestrating chaos, rewarding victory one moment,         |
+            |    punishing mercy the next. No one knows who controls the strings, but every battle seems to          |
+            |    serve a hidden purpose.                                                                             |
+            |                                                                                                        |
+            |    As mascots sharpen their skills, form friendships, and test their strength, the game world          |
+            |    grows stranger. Alliances crumble, betrayals sting, and even the most loyal heroes begin to         |
+            |    doubt: is the rival across from them the true enemy, or something far more sinister hiding          |
+            |    behind the screen?                                                                                  |
+            |                                                                                                        |
+            |    The battle has begun—but the real war is still unseen. Only the strongest, cleverest, and           |
+            |    most determined will survive the coming storm… and perhaps uncover the truth behind the             |
+            |    invisible hand controlling it all.                                                                  |
+            |                                                                                                        |
+         ___________________________________________________________________________________________________________ |
+    ()==(                                                                                                          (@==()
+         '----------------------------------------------------------------------------------------------------------'
+
         """);
     }
 
@@ -159,17 +192,36 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        
+                        Harland “Colonel” Sanders became more than a man—he became a father 
+                        figure. Having struggled through hardship himself, he saw the value of 
+                        discipline, patience, and care. Strict but loving, he raised a family 
+                        of lost children in his roadside restaurant, turning fried chicken into 
+                        lessons of perseverance and life skills. His wife, Claudia Price, was 
+                        the heart of the home, nurturing the children, while he was the shield, 
+                        defending them from the storms of life. Honored as “Colonel of Kentucky” 
+                        in 1935 for his contributions to the state, Sanders carried that same 
+                        protective spirit into every kitchen and battlefield.
 
 
                         WHERE (THE ORIGIN):
 
-                        
-
+                        Long before the golden buckets and famous slogans, Colonel Sanders 
+                        was just a simple man with an iron skillet and a stubborn dream.
+                        During the Great Depression, he ran a small roadside restaurant in 
+                        Kentucky, serving fried chicken made from his secret recipe. When 
+                        he saw abandoned children roaming the roads, he took them in—teaching 
+                        them not only to cook, but to live with discipline, hard work, and love. 
+                        The diner became a home… and the home became an orphanage, protected 
+                        under his care.
 
                         WHY (THE MOTIVATION):
 
-                                    
+                        Now, a new storm brews. Rival mascots, greedy corporations, and twisted 
+                        chefs threaten to consume the world in chaos and gluttony. The Colonel 
+                        enters the Fast Feuds not for glory—but for his family. He fights to 
+                        protect his wife, who now stands as the orphanage’s beating heart, and 
+                        to test his children, ensuring they are strong enough to face whatever 
+                        darkness comes next.            
 
 
                         """);
@@ -184,18 +236,34 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
+                        The Crowned Prince of the Whopper Empire. A royal born with flame in his
+                        blood and pride in his crown. Though raised in golden halls, he never forgot
+                        the taste of the streets. Beneath his regal charm lies a warrior’s heart, 
+                        fueled by flame-grilled honor and a thirst for challenge. Known for his 
+                        confident grin and fiery wit, Burger King believes that true royalty is not 
+                        inherited, it is earned, one victory at a time.
+
                         
-
-
                         WHERE (THE ORIGIN):
 
-                        
+                        As a child, the young prince was sent to an orphanage in secret after assassins 
+                        threatened his family’s throne. Hidden among ordinary children, he learned 
+                        humility, hunger, and the simple joy of a freshly grilled burger. Years later, 
+                        when the truth of his lineage was revealed, he reclaimed his title not with 
+                        armies, but with ambition, rebuilding the Whopper Empire from the ashes. Now, 
+                        his flame burns across kingdoms, his banners flying wherever the scent of smoky 
+                        beef fills the air.
 
 
                         WHY (THE MOTIVATION):
 
-                                    
-
+                        Tired of the silence of the throne and drawn by the thrill of combat, Burger King 
+                        joins the grand fighting competition, not out of vengeance or despair, but for pure 
+                        enjoyment. To him, every battle is a feast, every rival a new flavor to savor. Yet 
+                        beneath the laughter and bravado, the prince seeks something deeper, proof that even 
+                        a king must fight for his crown, that greatness is not given, it is grilled, forged, 
+                        and earned through fire.
+                            
 
                         """);
 
@@ -209,7 +277,10 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        
+                        Wendy is the only girl in the orphanage, known for her fiery spirit and quick wit. 
+                        She became the favorite of Colonel KFC’s wife, who treated her like a daughter. 
+                        Though young, she carries the weight of loss and responsibility on her shoulders. 
+                        Her charm hides a fierce determination to survive and protect those she loves.
 
 
                         WHERE (THE ORIGIN):
@@ -219,7 +290,13 @@ public class GameInfo {
 
                         WHY (THE MOTIVATION):
 
-                                    
+                        Though she smiles and plays like the other children, she harbors a deep secret.
+                        she recently discovered that the one responsible for her father’s death is somewhere 
+                        in this chaotic game world. She doesn’t yet know who, only that the answer lies within 
+                        the arena of the game. Her journey is fueled by the desire for justice and closure, 
+                        tempered by the love she received from KFC’s wife—a reminder of what she is fighting 
+                        to protect, and why she cannot afford to lose.            
+
                        
                         """);
 
@@ -272,15 +349,30 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
+                        A wealthy philanthropist known for spreading food and hope, he became a 
+                        legend among the orphanage kids. Despite his fortune, he is humble and 
+                        hands-on, always serving alongside those he helps. His presence brings a 
+                        sense of security and warmth to those around him. Even in the chaos of battle, 
+                        he carries the aura of generosity like armor.
                         
-
 
                         WHERE (THE ORIGIN):
 
+                        While traveling the world delivering charity, he stumbled upon KFC’s orphanage 
+                        and was moved by its mission. Inspired, he began donating and personally aiding 
+                        the children, leaving traces of his kindness in every corner. In 1985, his Love 
+                        Kitchen initiative started providing free pizza to the hungry and homeless 
+                        nationwide. Every journey strengthened his resolve to protect the innocent from 
+                        the world’s harshness.
                         
 
-
                         WHY (THE MOTIVATION):
+                        During his charitable travels, he uncovered the dark plans of the mysterious forces 
+                        controlling the game world. Attempting to intervene, his memory was tampered with, 
+                        making him forget his true purpose. Now, he fights alongside—or against—anyone, 
+                        driven by fragmented visions and flashes of the truth. Every encounter is a puzzle, 
+                        and every ally could be an enemy in disguise.
+
 
                         """);
 
