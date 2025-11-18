@@ -1,27 +1,41 @@
 package characters;
-public class KFC extends Character{
-    public KFC() 
-    {
-        super("Kentucky Fried Chicken", 155, 60, 3, "DrumStick Smash", "Shooting Flaming Hotshot", "Secret Sauce Overload"); //character name, hp, mana, mana regen
+
+public class KFC extends Character {
+
+    public KFC() {
+        super(
+            "Kentucky Fried Chicken",
+            155,   // Max HP
+            60,    // Max Mana
+            3,     // Mana Regen
+            "DrumStick Smash",
+            "Shooting Flaming Hotshot",
+            "Secret Sauce Overload",
+
+            // Mana Costs
+            0,     // Basic
+            20,    // Secondary
+            30,    // Ultimate
+
+            // Damage Ranges
+            13, 17,   // Basic min/max
+            22, 28,   // Secondary min/max
+            30, 40    // Ultimate min/max
+        );
     }
 
     @Override
-    public void basicAttack(Character target) 
-    {
-        performAttack(target, 13, 17, 0, "DrumStick Smash"); //target name, min dmg, max dmg, mana cost
+    public void basicAttack(Character target) {
+        performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), "DrumStick Smash");
     }
 
     @Override
-    public void secondarySkill(Character target) 
-    {
-        performAttack(target, 22, 28, 20, "Shooting Flaming Hotshot"); //target name, min dmg, max dmg, mana cost
+    public void secondarySkill(Character target) {
+        performAttack(target, getSecondaryMinDmg(), getSecondaryMaxDmg(), getSecondaryManaCost(), "Shooting Flaming Hotshot");
     }
 
     @Override
-    public void ultimateSkill(Character target) 
-    {
-        performAttack(target, 30, 40, 45, "Secret Sauce Overload"); //target name, min dmg, max dmg, mana cost
+    public void ultimateSkill(Character target) {
+        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), "Secret Sauce Overload");
     }
-    
-    
 }

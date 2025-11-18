@@ -10,6 +10,7 @@ public class Battle {
     private boolean isPVC;
     private Random random = new Random();
 
+
     public Battle(Character player1, Character player2) {
         this.player1 = player1;
         this.player2 = player2;
@@ -22,29 +23,31 @@ public class Battle {
         this.isPVC = isPVC;
     }
 
-    public void start() {
-        Scanner scanner = new Scanner(System.in);
+public void start() {
+    Scanner scanner = new Scanner(System.in);
+    int round = 1;
+    int player1Wins = 0;
+    int player2Wins = 0;
+
+    while (round <= 3 && player1Wins < 2 && player2Wins < 2) {
+
+        // Reset HP and Mana at the start of each round
+        player1.restoreHP();
+        player2.restoreHP();
+        player1.restoreMana();
+        player2.restoreMana();
+
+        System.out.println("\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ROUND " + round + " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+
         int turn = 1;
-
-        // randomize who goes first
         boolean player1Starts = random.nextBoolean();
+        System.out.println("First Turn: " + (player1Starts ? player1.getName() : player2.getName()));
 
-        System.out.println("\n══════════════════════════════════════════════════");
-        System.out.println("                  BATTLE START!");
-        System.out.println("══════════════════════════════════════════════════");
-        System.out.println(" Player 1: " + player1.getName() + "  VS  Player 2: " + player2.getName());
-        System.out.println(" First Turn: " + (player1Starts ? player1.getName() : player2.getName()));
-        System.out.println("══════════════════════════════════════════════════");
-
-        // main battle loop
+        // Single round battle
+        // Single round battle
         while (player1.isAlive() && player2.isAlive()) {
-            System.out.println();
-            System.out.println("----------------- TURN " + turn + " -----------------"  );
-            System.out.println();
-
             Character current, opponent;
 
-            // determine turn order: alternate between player1 and player2
             if ((turn % 2 != 0 && player1Starts) || (turn % 2 == 0 && !player1Starts)) {
                 current = player1;
                 opponent = player2;
@@ -53,17 +56,11 @@ public class Battle {
                 opponent = player1;
             }
 
-            System.out.println("\n" + current.getName() + "'s Turn!");
+            System.out.println("\n══════════ ROUND " + round + " - TURN " + turn + " ══════════");
+            System.out.println(current.getName() + "'s Turn!");
             showStats();
 
-            int move;
-            if (isPVC && current == player2) {
-                move = random.nextInt(3) + 1;
-                System.out.println("Computer chose move #" + move + "!");
-            } else {
-                move = chooseMove(scanner, current);
-            }
-
+            int move = (isPVC && current == player2) ? random.nextInt(3) + 1 : chooseMove(scanner, current);
             performMoveWithBanner(current, opponent, move);
 
             // Random mana regen every 2 turns
@@ -73,34 +70,59 @@ public class Battle {
                 System.out.println("\n Both players regenerated some mana!");
             }
 
-            showStats();
             turn++;
         }
 
-        // end of battle
-        System.out.println("\n──────────────────────── END ────────────────────────");
-        System.out.println();
+
+        // Round end
         if (player1.isAlive()) {
-            System.out.println(" PLAYER 1 (" + player1.getName() + ") WINS!");
+            player1Wins++;
+            System.out.println("\nROUND " + round + " WINNER: " + player1.getName());
+        } else if (player2.isAlive()) {
+            player2Wins++;
+            System.out.println("\nROUND " + round + " WINNER: " + player2.getName());
         } else {
-            System.out.println(" PLAYER 2 (" + player2.getName() + ") WINS!");
+            System.out.println("\nROUND " + round + " IS A DRAW!");
         }
-        System.out.println();
-        System.out.println("───── ────── ────── ────── ────── ────── ────── ────── ");
+
+        System.out.println("Score: " + player1.getName() + " " + player1Wins + " - " + player2Wins + " " + player2.getName());
+        
+        // Only go to next round if no one has 2 wins yet
+        if (player1Wins == 2 || player2Wins == 2) break;
+
+        round++;
     }
+
+    // Match winner
+    System.out.println("\n──────────────────────── MATCH END ────────────────────────");
+    if (player1Wins > player2Wins) {
+        System.out.println("OVERALL WINNER: " + player1.getName() + "!");
+    } else {
+        System.out.println("OVERALL WINNER: " + player2.getName() + "!");
+    }
+}
+
 
     private int chooseMove(Scanner scanner, Character player) {
         System.out.println("Choose a move:");
+        System.out.println();
 
-        String basicSkillName = player.getBasicSkillName();
-        String secondarySkillName = player.getSecondarySkillName();
-        String ultimateSkillName = player.getUltimateSkillName();
+        System.out.println("[1] Basic Attack - " + player.getBasicSkillName());
+        System.out.println("     Mana Cost: " + player.getBasicManaCost() +
+                        " | Damage: " + player.getBasicMinDmg() + "-" + player.getBasicMaxDmg());
 
+        System.out.println("[2] Secondary Skill - " + player.getSecondarySkillName());
+        System.out.println("     Mana Cost: " + player.getSecondaryManaCost() +
+                        " | Damage: " + player.getSecondaryMinDmg() + "-" + player.getSecondaryMaxDmg());
 
-        System.out.println("[1] Basic Attack - " + basicSkillName);
-        System.out.println("[2] Secondary Skill - " + secondarySkillName);
-        System.out.println("[3] Ultimate Skill - " + ultimateSkillName);
+        System.out.println("[3] Ultimate Skill - " + player.getUltimateSkillName());
+        System.out.println("     Mana Cost: " + player.getUltimateManaCost() +
+                        " | Damage: " + player.getUltimateMinDmg() + "-" + player.getUltimateMaxDmg());
+
+        System.out.println();
         System.out.print("Enter your choice: ");
+
+        
         int choice;
         try {
             choice = scanner.nextInt();
@@ -108,7 +130,9 @@ public class Battle {
             scanner.nextLine(); 
             choice = 1;
         }
+        System.out.println();
         return choice;
+        
     }
 
     private void performMoveWithBanner(Character attacker, Character defender, int move) {
@@ -136,7 +160,7 @@ public class Battle {
 
         int damage = Math.max(0, beforeHP - defender.getHealth());
 
-        System.out.println("\n");
+        System.out.println();
         System.out.println("^ " + attacker.getName() + " used " + moveBannerName + "!");
         if (damage > 0) {
             System.out.println("^ " + defender.getName() + " took " + damage + " damage!");

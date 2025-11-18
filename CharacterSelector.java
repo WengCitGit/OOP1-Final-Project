@@ -49,7 +49,7 @@ public class CharacterSelector {
 
         System.out.println();
         System.out.println("You chose character " + choice + ". " + names[choice - 1] + ".");
-        System.out.println();
+        
 
         characters.Character chosen = createCharacter(choice);
         chosen.setName(names[choice - 1]);

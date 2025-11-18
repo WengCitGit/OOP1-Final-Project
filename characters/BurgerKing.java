@@ -1,27 +1,61 @@
 package characters;
-public class BurgerKing extends Character{
-    public BurgerKing() 
-    {
-        super("Burger King", 165, 60, 3, "Whopper Flame", "Onion Ring Shockwave", "Flame-Grilled Feast"); //character name, hp, mana, mana regen
+
+public class BurgerKing extends Character {
+
+    public BurgerKing() {
+        super(
+            "Burger King",
+            165,   // max HP
+            60,    // max Mana
+            5,     // mana regen
+
+            // SKILL NAMES
+            "Whopper Flame",
+            "Onion Ring Shockwave",
+            "Flame-Grilled Feast",
+
+            // MANA COSTS
+            0,     // basic mana cost
+            15,    // secondary mana cost
+            25,    // ultimate mana cost
+
+            // DAMAGE VALUES
+            5, 10,     // basic min-max dmg
+            9, 12,     // secondary min-max dmg
+            20, 35     // ultimate min-max dmg
+        );
     }
 
     @Override
-    public void basicAttack(Character target) 
-    {
-        performAttack(target, 5, 10, 0, "Whopper Flame"); //target name, min dmg, max dmg, mana cost
+    public void basicAttack(Character target) {
+        performAttack(
+            target,
+            getBasicMinDmg(),
+            getBasicMaxDmg(),
+            getBasicManaCost(),
+            getBasicSkillName()
+        );
     }
 
     @Override
-    public void secondarySkill(Character target) 
-    {
-        performAttack(target, 9, 12, 15, "Onion Ring Shockwave "); //target name, min dmg, max dmg, mana cost
+    public void secondarySkill(Character target) {
+        performAttack(
+            target,
+            getSecondaryMinDmg(),
+            getSecondaryMaxDmg(),
+            getSecondaryManaCost(),
+            getSecondarySkillName()
+        );
     }
 
     @Override
-    public void ultimateSkill(Character target) 
-    {
-        performAttack(target, 20, 35, 25, "Flame-Grilled Feast"); //target name, min dmg, max dmg, mana cost
+    public void ultimateSkill(Character target) {
+        performAttack(
+            target,
+            getUltimateMinDmg(),
+            getUltimateMaxDmg(),
+            getUltimateManaCost(),
+            getUltimateSkillName()
+        );
     }
-    
-    
 }

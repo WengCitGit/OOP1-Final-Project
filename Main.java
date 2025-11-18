@@ -51,7 +51,7 @@ public class Main{
 
             while(isEnabledMode) {
                 try {
-                    System.out.println("        Choose your gamemode:");
+                    System.out.println("      Choose your gamemode:");
                     System.out.println("===================================");
                     System.out.println("*  [1] Player vs Player (PVP)     *");
                     System.out.println("*  [2] Player vs Computer (PVC)   *");
@@ -59,7 +59,7 @@ public class Main{
                     System.out.println("*  [4] Game Info / Lore           *");
                     System.out.println("*  [5] Exit Game                  *");
                     System.out.println("===================================");
-                    System.out.print("Enter choice (1-3): ");
+                    System.out.print("Enter choice (1-5): ");
                     mode = Integer.parseInt(scan.nextLine());
 
                     if (mode >= 1 && mode <= 5) {
@@ -134,7 +134,7 @@ public class Main{
 
             // --- ASK TO PLAY AGAIN ---
 
-           while (true) {
+            while (true) {
                 try {
                     System.out.println();
                     System.out.print("Would you like to play again? (y/n): ");

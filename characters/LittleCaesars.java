@@ -1,27 +1,41 @@
 package characters;
-public class LittleCaesars extends Character{
-    public LittleCaesars() 
-    {
-        super("Little Caesars", 185, 55, 0, "Hot-N-Ready Slam", "Crazy Bread Barrage", "Deep! Deep! Dish Catastrophe"); //character name, hp, mana, mana regen
+
+public class LittleCaesars extends Character {
+
+    public LittleCaesars() {
+        super(
+            "Little Caesars",
+            185,   // Max HP
+            55,    // Max Mana
+            4,     // Mana Regen
+            "Hot-N-Ready Slam",
+            "Crazy Bread Barrage",
+            "Deep! Deep! Dish Catastrophe",
+
+            // Mana Costs
+            0,     // Basic
+            15,    // Secondary
+            25,    // Ultimate
+
+            // Damage Ranges
+            12, 18,   // Basic min/max
+            18, 26,   // Secondary min/max
+            30, 45    // Ultimate min/max
+        );
     }
 
     @Override
-    public void basicAttack(Character target) 
-    {
-        performAttack(target, 12, 18, 0, "Hot-N-Ready Slam"); //target name, min dmg, max dmg, mana cost
+    public void basicAttack(Character target) {
+        performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), "Hot-N-Ready Slam");
     }
 
     @Override
-    public void secondarySkill(Character target) 
-    {
-        performAttack(target, 18, 26, 15, "Crazy Bread Barrage"); //target name, min dmg, max dmg, mana cost
+    public void secondarySkill(Character target) {
+        performAttack(target, getSecondaryMinDmg(), getSecondaryMaxDmg(), getSecondaryManaCost(), "Crazy Bread Barrage");
     }
 
     @Override
-    public void ultimateSkill(Character target) 
-    {
-        performAttack(target, 30, 62, 25, "Deep! Deep! Dish Catastrophe"); //target name, min dmg, max dmg, mana cost
+    public void ultimateSkill(Character target) {
+        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), "Deep! Deep! Dish Catastrophe");
     }
-    
-    
 }

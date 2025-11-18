@@ -13,14 +13,32 @@ public abstract class Character {
     private int regenMana;
     private Random random;
 
+    //mana costs
+    private int basicManaCost;
+    private int secondaryManaCost;
+    private int ultimateManaCost;
+
+    //dmg
+    private int basicMinDmg;
+    private int basicMaxDmg;
+    private int secondaryMinDmg;
+    private int secondaryMaxDmg;
+    private int ultimateMinDmg;
+    private int ultimateMaxDmg;
+
+
     // Skill names
     private String basicSkillName;
     private String secondarySkillName;
     private String ultimateSkillName;
 
+    
+
     // ====== Constructor ======
     public Character(String name, int maxHp, int maxMana, int regenMana,
-                     String basicSkillName, String secondarySkillName, String ultimateSkillName) {
+                    String basicSkillName, String secondarySkillName, String ultimateSkillName, 
+                    int basicManaCost, int secondaryManaCost, int ultimateManaCost, int basicMinDmg, int basicMaxDmg,
+                    int secondaryMinDmg, int secondaryMaxDmg, int ultimateMinDmg, int ultimateMaxDmg) {
 
         this.name = name;
         this.maxHp = maxHp;
@@ -33,13 +51,27 @@ public abstract class Character {
         this.basicSkillName = basicSkillName;
         this.secondarySkillName = secondarySkillName;
         this.ultimateSkillName = ultimateSkillName;
+
+        //Mana cost
+        this.basicManaCost = basicManaCost;
+        this.secondaryManaCost = secondaryManaCost;
+        this.ultimateManaCost = ultimateManaCost;
+
+        //dmg
+        this.basicMinDmg = basicMinDmg;
+        this.basicMaxDmg = basicMaxDmg;
+        this.secondaryMinDmg = secondaryMinDmg;
+        this.secondaryMaxDmg = secondaryMaxDmg;
+        this.ultimateMinDmg = ultimateMinDmg;
+        this.ultimateMaxDmg = ultimateMaxDmg;
+
     }
 
     // ====== Core Battle Mechanics ======
     protected void performAttack(Character target, int minDamage, int maxDamage, int manaCost, String skillName) {
         if (this.currMana < manaCost) {
             System.out.println(this.name + " does not have enough mana for " + skillName +
-                               "! (Needs " + manaCost + ", has " + this.currMana + ")");
+                                "! (Needs " + manaCost + ", has " + this.currMana + ")");
             return;
         }
 
@@ -47,10 +79,11 @@ public abstract class Character {
         int damage = minDamage + this.random.nextInt(maxDamage - minDamage + 1);
         target.takeDamage(damage);
 
-        System.out.println("══════════════════════════════════════════════════");
+        /*System.out.println("══════════════════════════════════════════════════");
         System.out.println(this.name + " used " + skillName + "!");
         System.out.println(this.name + " deals " + damage + " damage to " + target.getName() + "!");
-        System.out.println("══════════════════════════════════════════════════");
+        System.out.println("══════════════════════════════════════════════════");*/
+        
     }
 
     // ====== Abstract Skill Methods ======
@@ -73,7 +106,7 @@ public abstract class Character {
     }
 
     public void regenerateManaRandomly() {
-        // Example: random regen between 5 and regenMana after 2 turns (handled in Battle)
+        // random regen between 5 and regenMana after 2 turns (handled in Battle)
         int regen = 5 + random.nextInt(this.regenMana);
         this.currMana = Math.min(this.maxMana, this.currMana + regen);
     }
@@ -110,6 +143,26 @@ public abstract class Character {
     public String getUltimateSkillName() {
         return this.ultimateSkillName;
     }
+
+    public void restoreHP() {
+        this.hp = this.maxHp;
+    }
+
+    public void restoreMana() {
+        this.currMana = this.maxMana;
+    }
+
+
+    public int getBasicManaCost() { return basicManaCost; }
+    public int getSecondaryManaCost() { return secondaryManaCost; }
+    public int getUltimateManaCost() { return ultimateManaCost; }
+
+    public int getBasicMinDmg() { return basicMinDmg; }
+    public int getBasicMaxDmg() { return basicMaxDmg; }
+    public int getSecondaryMinDmg() { return secondaryMinDmg; }
+    public int getSecondaryMaxDmg() { return secondaryMaxDmg; }
+    public int getUltimateMinDmg() { return ultimateMinDmg; }
+    public int getUltimateMaxDmg() { return ultimateMaxDmg; }
 
     // ====== Setters ======
     public void setName(String name) {
