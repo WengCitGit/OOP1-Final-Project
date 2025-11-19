@@ -7,8 +7,14 @@ public class Main{
         boolean playAgain = true;
         Scanner scan = new Scanner(System.in);
 
+        //music player
+        MusicPlayer music = new MusicPlayer();
+
         while(playAgain){
 
+            if (!music.isPlaying()) {
+                music.play("bgm.wav");
+            }
             
 
             System.out.println("██████████████████████████████████████████████████████████████████████████████████╗");
@@ -82,11 +88,14 @@ public class Main{
 
              // Handle choice
             if (mode == 4) {
+                music.stop();
+                music.play("arcade_bgm.wav");
                 gameInfo.displayGameInfo();
-                // After showing info, loop back to game mode menu
                 continue;
             } else if (mode == 5) {
                 System.out.println("Exiting game. Thanks for playing!");
+                // --- STOP MUSIC ON EXIT ---
+                music.stop();
                 scan.close();
                 return;
             }
@@ -105,6 +114,7 @@ public class Main{
                     break;
                 case 5 :
                     System.out.println(" Exiting game. Thanks for playing!");
+                    music.stop();
                     scan.close();
                     return;
                 default : System.out.println(" Invalid mode.");
@@ -125,7 +135,10 @@ public class Main{
                     break;
                 case 3:
                     System.out.println("--------------------Starting ARCADE MODE--------------------");
+                    music.stop();
+                    music.play("arcade_bgm.wav");
                     game.startArcade();  // start Arcade Mode
+                    music.stop();  
                     break;
                 default:
                     System.out.println("Invalid mode selected!");
@@ -152,6 +165,7 @@ public class Main{
                     } else if (answer == 'n') {
                         playAgain = false;
                         System.out.println("\nThanks for playing Battle of the Mascots! See you next time!\n");
+                        music.stop();
                     } else {
                         System.out.println("Invalid input! Please enter 'y' or 'n'.");
                         continue; 
@@ -162,6 +176,7 @@ public class Main{
                 } catch (Exception e) {
                     System.out.println("Error: " + e.getMessage());
                     playAgain = false;
+                    music.stop();
                     break; 
                 }
             }

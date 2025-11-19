@@ -114,16 +114,6 @@ public abstract class Character {
     }
 
 
-    // public void regenerateMana() {
-    //     this.currMana = Math.min(this.maxMana, this.currMana + this.regenMana);
-    // }
-
-    // public void regenerateManaRandomly() {
-    //     // random regen between 5 and regenMana after 2 turns (handled in Battle)
-    //     int regen = 5 + random.nextInt(this.regenMana);
-    //     this.currMana = Math.min(this.maxMana, this.currMana + regen);
-    // }
-
     // ====== Getters ======
     public String getName() {
         return this.name;
