@@ -25,8 +25,7 @@ public class Main{
             System.out.println("  ╚═══════════════════════════════════════════════════════════════════════════════╝");
 
             System.out.println();
-            System.out.print("Press ENTER to begin...");
-            scan.nextLine();
+            waitForEnterWithAnimation(scan);
             System.out.println();
 
             System.out.println("     ************************************************************************");
@@ -172,4 +171,37 @@ public class Main{
 
 
     }
+
+    public static void waitForEnterWithAnimation(Scanner scan) {
+        final boolean[] stopAnimation = {false};
+
+        Thread animationThread = new Thread(() -> {
+            String message = "Press ENTER to begin";
+            int dots = 0;
+
+            while (!stopAnimation[0]) {
+                String dotString = ".".repeat(dots);
+                
+                // \033[K clears line to the right
+                System.out.print("\r" + message + dotString + "\033[K"); 
+
+                dots = (dots + 1) % 4; // Cycle 0, 1, 2, 3
+
+                try {
+                    Thread.sleep(500); 
+                } catch (InterruptedException e) {
+                    break;
+                }
+            }
+            
+        });
+
+        animationThread.start();
+        scan.nextLine();
+        stopAnimation[0] = true;
+        animationThread.interrupt(); 
+        try { animationThread.join(); } catch (InterruptedException e) {}
+    }
 }
+
+

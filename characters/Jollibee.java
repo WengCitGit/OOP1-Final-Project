@@ -5,7 +5,7 @@ public class Jollibee extends Character {
     public Jollibee() {
         super(
             "Jollibee",
-            150,   // Max HP
+            160,   // Max HP
             60,    // Max Mana
             15,    // Mana Regen
             "Juicylicious Crispy Chicken Joy Slam",

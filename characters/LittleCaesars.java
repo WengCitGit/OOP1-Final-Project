@@ -5,8 +5,8 @@ public class LittleCaesars extends Character {
     public LittleCaesars() {
         super(
             "Little Caesars",
-            185,   // Max HP
-            55,    // Max Mana
+            175,   // Max HP
+            50,    // Max Mana
             4,     // Mana Regen
             "Hot-N-Ready Slam",
             "Crazy Bread Barrage",
@@ -18,9 +18,9 @@ public class LittleCaesars extends Character {
             25,    // Ultimate
 
             // Damage Ranges
-            12, 18,   // Basic min/max
-            18, 26,   // Secondary min/max
-            30, 45    // Ultimate min/max
+            12, 16,   // Basic min/max
+            18, 25,   // Secondary min/max
+            30, 42    // Ultimate min/max
         );
     }
 

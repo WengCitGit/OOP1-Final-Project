@@ -5,8 +5,8 @@ public class KFC extends Character {
     public KFC() {
         super(
             "Kentucky Fried Chicken",
-            155,   // Max HP
-            60,    // Max Mana
+            165,   // Max HP
+            55,    // Max Mana
             3,     // Mana Regen
             "DrumStick Smash",
             "Shooting Flaming Hotshot",

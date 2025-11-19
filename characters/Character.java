@@ -101,15 +101,28 @@ public abstract class Character {
         return this.hp > 0;
     }
 
-    public void regenerateMana() {
-        this.currMana = Math.min(this.maxMana, this.currMana + this.regenMana);
+    public void addMana(int amount) {
+       this.currMana = Math.min(this.maxMana, this.currMana + amount);
+   }
+
+    public void restoreHP() {
+        this.hp = this.maxHp;
     }
 
-    public void regenerateManaRandomly() {
-        // random regen between 5 and regenMana after 2 turns (handled in Battle)
-        int regen = 5 + random.nextInt(this.regenMana);
-        this.currMana = Math.min(this.maxMana, this.currMana + regen);
+    public void restoreMana() {
+        this.currMana = this.maxMana;
     }
+
+
+    // public void regenerateMana() {
+    //     this.currMana = Math.min(this.maxMana, this.currMana + this.regenMana);
+    // }
+
+    // public void regenerateManaRandomly() {
+    //     // random regen between 5 and regenMana after 2 turns (handled in Battle)
+    //     int regen = 5 + random.nextInt(this.regenMana);
+    //     this.currMana = Math.min(this.maxMana, this.currMana + regen);
+    // }
 
     // ====== Getters ======
     public String getName() {
@@ -142,14 +155,6 @@ public abstract class Character {
 
     public String getUltimateSkillName() {
         return this.ultimateSkillName;
-    }
-
-    public void restoreHP() {
-        this.hp = this.maxHp;
-    }
-
-    public void restoreMana() {
-        this.currMana = this.maxMana;
     }
 
 

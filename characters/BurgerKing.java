@@ -5,7 +5,7 @@ public class BurgerKing extends Character {
     public BurgerKing() {
         super(
             "Burger King",
-            165,   // max HP
+            160,   // max HP
             60,    // max Mana
             5,     // mana regen
 

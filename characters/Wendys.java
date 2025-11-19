@@ -5,8 +5,8 @@ public class Wendys extends Character {
     public Wendys() {
         super(
             "Wendys",
-            175,   // Max HP
-            65,    // Max Mana
+            165,   // Max HP
+            60,    // Max Mana
             4,     // Mana Regen
             "Sassy Roast",
             "Vanilla Vengeance",

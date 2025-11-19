@@ -5,8 +5,8 @@ public class ChiefKhai extends Character {
     public ChiefKhai() {
         super(
             "Chief Khai",
-            200,      // Max HP
-            75,       // Max Mana
+            185,      // Max HP
+            65,       // Max Mana
             2,        // Mana Regen
             "Batuta Bonk",
             "Pakibukas ng bag",
