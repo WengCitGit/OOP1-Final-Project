@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "Main",
+        "Characters",
+        "Battle",
+        "resources"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": []
+}

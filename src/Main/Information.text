@@ -1,0 +1,144 @@
+GAME INFORMATION 
+MASCOT LEGENDS BANG BANG
+NASAN
+
+TURN-BASED GAME
+
+FAST FOOD FRANCHISES
+
+CHARACTERS
+Jollibee
+McDonald’s
+KFC
+Burger King
+Wendy's
+Jack in the Box
+Little Caesars
+Guard
+
+Introduction
+Welcome the player to Battle of the Mascots, a turn-based RPG-style game where restaurant mascots and special characters battle using 
+food-themed attacks.
+
+
+Goal: Reduce your opponent’s HP to 0 using strategy, skills, and combos.
+2. Game Modes
+Player vs Player (PVP)
+
+
+Two players take turns selecting actions.
+Each player controls a chosen character.
+
+
+Player vs Computer (PVC)
+
+
+Player fights an AI opponent.
+AI selects skills randomly or strategically (depending on difficulty).
+
+
+Arcade Mode
+
+
+Fight through a series of opponents.
+Face the Final Boss (Greasy Overlord) to win.
+Unlock Easter Egg characters like Kishanta, Rothesa, Wengie, and Kunihiko.
+3. Character Selection
+Choose from 8 main mascots 
+1. jollibee
+2. mcdo
+3. kfc
+4. burger king
+5. wendy's
+6. jack in the box
+7. little caesars
+8. guard
+Each character has:
+
+
+Health (HP)
+Mana/Energy (MP)
+Skills & Combos
+Cooldowns
+4. Gameplay Mechanics
+Turn-Based System
+
+
+Players take turns choosing a skill or action.
+Available actions per turn:
+
+
+Basic Attack
+Secondary Attack
+Ultimate/Combo Attack (if requirements met)
+
+Skill System
+Skills cost mana and have cooldowns.
+
+
+Examples:
+
+
+Jollibee → Yum Burger Smash, Chickenjoy Slam
+McDo → Big Mac Punch, McFlurry Blast
+Combos
+
+
+Some skills can trigger combo attacks if used in a specific sequence.
+Example: Yum Burger + Chickenjoy → Bee Happy Feast
+
+
+Victory Condition
+Reduce opponent’s HP to 0 to win.
+In Arcade Mode, defeat all opponents to reach the Final Boss.
+5. Health and Mana Display with Example if attacked
+
+Jollibee ❤ 500/500   🔮 200/200
+Ronald  ❤ 500/500   🔮 200/200
+Jollibee used Juicylicious Crispy Chicken Joy Slam
+“Sarap to the bones!”
+Chickenjoy bucket falls from the sky—boom!
+Jollibee ❤ 500/500   🔮 190/200
+Ronald  ❤ 486/500   🔮 200/200
+
+kfc
+burger king
+wendy's
+jack in the box
+little caesars
+guard
+
+*Shows HP, MP, and optionally status effects (stun, freeze, poison).
+
+
+6. Special Features
+ASCII art portraits for each character.
+Sound effects for attacks (if implemented).
+Unlockable Easter Egg characters in Arcade Mode.
+Random events in Arcade (optional, e.g., +50 HP from free fries).
+
+
+7. Controls
+Input numbers or letters to select actions.
+Example:
+
+ Choose your action:
+1. Basic Attack
+2. Secondary Attack
+3. Ultimate Attack
+
+Confirm input to execute skill.
+8. Tips for Players
+Watch cooldowns—don’t waste Ultimate early.
+
+
+Combo attacks deal more damage than separate skills.
+
+
+In Arcade, know the boss patterns to survive.
+
+
+
+
+
+
