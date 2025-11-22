@@ -60,18 +60,19 @@ public class Main{
                     System.out.println("===================================");
                     System.out.println("*  [1] Player vs Player (PVP)     *");
                     System.out.println("*  [2] Player vs Computer (PVC)   *");
-                    System.out.println("*  [3] Arcade Mode                *");
-                    System.out.println("*  [4] Game Info / Lore           *");
-                    System.out.println("*  [5] Exit Game                  *");
+                    System.out.println("*  [3] Endless Mode               *");
+                    System.out.println("*  [4] Arcade Mode (Coming Soon)  *");
+                    System.out.println("*  [5] Game Info / Lore           *");
+                    System.out.println("*  [6] Exit Game                  *");
                     System.out.println("===================================");
-                    System.out.print("Enter choice (1-5): ");
+                    System.out.print("Enter choice (1-6): ");
                     mode = Integer.parseInt(scan.nextLine());
 
-                    if (mode >= 1 && mode <= 5) {
+                    if (mode >= 1 && mode <= 6) {
                         isEnabledMode = false;
                     } else {
                         System.out.println();
-                        System.out.println("Invalid number! Please enter between 1 and 3.");
+                        System.out.println("Invalid number! Please enter between 1 and 6.");
                         System.out.println();
                     }
                 } catch (NumberFormatException e) {
@@ -86,13 +87,11 @@ public class Main{
 
             GameInfo gameInfo = new GameInfo();
 
-             // Handle choice
-            if (mode == 4) {
-                music.stop();
-                music.play("arcade_bgm.wav");
+            // Handle choice
+            if (mode == 5) {
                 gameInfo.displayGameInfo();
                 continue;
-            } else if (mode == 5) {
+            } else if (mode == 6) {
                 System.out.println("Exiting game. Thanks for playing!");
                 // --- STOP MUSIC ON EXIT ---
                 music.stop();
@@ -108,11 +107,13 @@ public class Main{
                     break;
                 case 2 : System.out.println(" Player vs Computer Mode.");                  
                     break;
-                case 3 : System.out.println(" Arcade Mode.");
+                case 3 : System.out.println(" Endless Mode.");
                     break;
-                case 4 : gameInfo.displayGameInfo();           
+                case 4 : System.out.println(" Arcade Mode (Coming Soon).");
                     break;
-                case 5 :
+                case 5 : gameInfo.displayGameInfo();
+                    break;
+                case 6 :
                     System.out.println(" Exiting game. Thanks for playing!");
                     music.stop();
                     scan.close();
@@ -134,11 +135,15 @@ public class Main{
                     game.startPVC();  // start Player vs Computer
                     break;
                 case 3:
-                    System.out.println("--------------------Starting ARCADE MODE--------------------");
+                    System.out.println("--------------------Starting ENDLESS MODE--------------------");
                     music.stop();
                     music.play("arcade_bgm.wav");
-                    game.startArcade();  // start Arcade Mode
+                    game.startEndless();  // start Endless Mode
                     music.stop();  
+                    break;
+                case 4:
+                    System.out.println("--------------------Arcade Mode (Coming Soon)--------------------");
+                    game.startArcadeModePlaceholder();
                     break;
                 default:
                     System.out.println("Invalid mode selected!");

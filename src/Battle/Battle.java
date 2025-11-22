@@ -10,20 +10,28 @@ public class Battle {
 
     //store cooldowns
     private Map<Character, int[]> cooldowns = new HashMap<>();
+    // Display names provided by users (e.g., "Alex") or "Computer"
+    private String player1DisplayName;
+    private String player2DisplayName;
 
     public Battle(Character player1, Character player2) {
-        this.player1 = player1;
-        this.player2 = player2;
-        this.isPVC = false;
-
-        cooldowns.put(player1, new int[]{0,0});
-        cooldowns.put(player2, new int[]{0, 0});
+        this(player1, player2, false, "Player 1", "Player 2");
     }
 
     public Battle(Character player1, Character enemy, boolean isPVC) {
+        this(player1, enemy, isPVC, "Player 1", isPVC ? "Computer" : "Player 2");
+    }
+
+    public Battle(Character player1, Character player2, String player1DisplayName, String player2DisplayName) {
+        this(player1, player2, false, player1DisplayName, player2DisplayName);
+    }
+
+    public Battle(Character player1, Character player2, boolean isPVC, String player1DisplayName, String player2DisplayName) {
         this.player1 = player1;
-        this.player2 = enemy;
+        this.player2 = player2;
         this.isPVC = isPVC;
+        this.player1DisplayName = player1DisplayName;
+        this.player2DisplayName = player2DisplayName;
 
         cooldowns.put(player1, new int[]{0,0});
         cooldowns.put(player2, new int[]{0, 0});
@@ -31,11 +39,13 @@ public class Battle {
 
     //player label
     private String getPlayerLabel(Character c) {
-        if (c == player1) {
-            return "PLAYER 1";
-        } else {
-            return isPVC ? "COMPUTER" : "PLAYER 2";
-        }
+        if (c == player1) return player1DisplayName != null ? player1DisplayName : "Player 1";
+        return player2DisplayName != null ? player2DisplayName : (isPVC ? "Computer" : "Player 2");
+    }
+
+    private String getDisplayWithCharacterName(Character c) {
+        String label = getPlayerLabel(c);
+        return label + " (" + c.getName() + ")";
     }
 
     public void start() {
@@ -59,7 +69,7 @@ public class Battle {
 
             //announce who starts
             Character starter = player1Starts ? player1 : player2;
-            System.out.println("First Turn: " + getPlayerLabel(starter) + " (" + starter.getName() + ")");
+            System.out.println("First Turn: " + getDisplayWithCharacterName(starter));
 
             // Single round battle
             while (player1.isAlive() && player2.isAlive()) {
@@ -76,7 +86,7 @@ public class Battle {
                 decrementCooldowns(current);
 
                 System.out.println("\n══════════ ROUND " + round + " - TURN " + turn + " ══════════");
-                System.out.println(">>> " + getPlayerLabel(current) + ": " + current.getName() + "'s Turn! <<<");
+                System.out.println(">>> " + getDisplayWithCharacterName(current) + "'s Turn! <<<");
                 showStats();
 
                 // 2. Get Move (Respecting Cooldowns)
@@ -102,7 +112,7 @@ public class Battle {
                     player1.addMana(p1Regen);
                     player2.addMana(p2Regen);
 
-                    System.out.println("\n> Mana Regen: " + player1.getName() + " +" + p1Regen + " | " + player2.getName() + " +" + p2Regen);
+                    System.out.println("\n> Mana Regen: " + getDisplayWithCharacterName(player1) + " +" + p1Regen + " | " + getDisplayWithCharacterName(player2) + " +" + p2Regen);
                 }
 
                 turn++;
@@ -112,15 +122,15 @@ public class Battle {
             // Round end
             if (player1.isAlive()) {
                 player1Wins++;
-                System.out.println("\nROUND " + round + " WINNER: " + player1.getName());
+                System.out.println("\nROUND " + round + " WINNER: " + getDisplayWithCharacterName(player1));
             } else if (player2.isAlive()) {
                 player2Wins++;
-                System.out.println("\nROUND " + round + " WINNER: " + player2.getName());
+                System.out.println("\nROUND " + round + " WINNER: " + getDisplayWithCharacterName(player2));
             } else {
                 System.out.println("\nROUND " + round + " IS A DRAW!");
             }
 
-            System.out.println("Score: " + player1.getName() + " " + player1Wins + " - " + player2Wins + " " + player2.getName());
+            System.out.println("Score: " + getDisplayWithCharacterName(player1) + " " + player1Wins + " - " + player2Wins + " " + getDisplayWithCharacterName(player2));
             
             // Only go to next round if no one has 2 wins yet
             if (player1Wins == 2 || player2Wins == 2) break;
@@ -131,9 +141,9 @@ public class Battle {
     // Match winner
     System.out.println("\n──────────────────────── MATCH END ────────────────────────");
     if (player1Wins > player2Wins) {
-        System.out.println("OVERALL WINNER: " + player1.getName() + "!");
+        System.out.println("OVERALL WINNER: " + getDisplayWithCharacterName(player1) + "!");
     } else {
-        System.out.println("OVERALL WINNER: " + player2.getName() + "!");
+        System.out.println("OVERALL WINNER: " + getDisplayWithCharacterName(player2) + "!");
     }
 }
 
@@ -266,11 +276,11 @@ public class Battle {
         int damage = Math.max(0, beforeHP - defender.getHealth());
 
         System.out.println();
-        System.out.println("^ " + attacker.getName() + " used " + moveBannerName + "!");
+        System.out.println("^ " + getDisplayWithCharacterName(attacker) + " used " + moveBannerName + "!");
         if (damage > 0) {
-            System.out.println("^ " + defender.getName() + " took " + damage + " damage!");
+            System.out.println("^ " + getDisplayWithCharacterName(defender) + " took " + damage + " damage!");
         } else {
-            System.out.println("^ " + defender.getName() + " dodged the attack!");
+            System.out.println("^ " + getDisplayWithCharacterName(defender) + " dodged the attack!");
         }
         System.out.println("");
     }
@@ -278,13 +288,13 @@ public class Battle {
     private void showStats() {
         System.out.println("\n******************--- STATUS ---*********************");
 
-        System.out.println(getPlayerLabel(player1) + ": " + player1.getName() + 
-                ": HP " + player1.getHealth() + "/" + player1.getMaxHealth() +
-                " | Mana " + player1.getCurrentMana() + "/" + player1.getMaxMana());
+        System.out.println(getDisplayWithCharacterName(player1) + 
+            ": HP " + player1.getHealth() + "/" + player1.getMaxHealth() +
+            " | Mana " + player1.getCurrentMana() + "/" + player1.getMaxMana());
 
-        System.out.println(getPlayerLabel(player2) + ": " + player2.getName() + 
-                ": HP " + player2.getHealth() + "/" + player2.getMaxHealth() +
-                " | Mana " + player2.getCurrentMana() + "/" + player2.getMaxMana());
+        System.out.println(getDisplayWithCharacterName(player2) + 
+            ": HP " + player2.getHealth() + "/" + player2.getMaxHealth() +
+            " | Mana " + player2.getCurrentMana() + "/" + player2.getMaxMana());
                 
         System.out.println("*****************************************************");
     }
