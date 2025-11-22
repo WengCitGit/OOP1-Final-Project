@@ -37,13 +37,50 @@ import Characters.*;
             battle.start();
         }
 
-
         public void startArcade() {
             System.out.println("\n--- ARCADE MODE ---");
-            System.out.println("Coming soon! Fight random mascots in a survival streak!");
             System.out.println("Deathmatch against random characters until you lose!");
             System.out.println("Defeat as many as you can!");
-            System.out.println("Replace the boss with your own character!");
-           
+            System.out.println();
+
+            CharacterSelector selector = new CharacterSelector();
+
+            System.out.println("Choose your champion for Arcade Mode:");
+            Characters.Character player = selector.chooseCharacter();
+
+            int streak = 0;
+            while (true) {
+                System.out.println();
+                System.out.println("===== ARCADE ROUND " + (streak + 1) + " =====");
+                Characters.Character enemy = selector.chooseRandomCharacter();
+
+                System.out.println("Matchup: " + player.getName() + " VS " + enemy.getName());
+                System.out.println("Get ready...");
+
+                // Use PVC-style Battle so enemy acts automatically
+                Battle battle = new Battle(player, enemy, true);
+                battle.start();
+
+                // After battle, Battle.start() leaves the Character objects with their final HP state.
+                if (player.isAlive()) {
+                    // Player won the match
+                    streak++;
+                    // Heal player by 60% of max HP (capped)
+                    player.healPercentage(0.6);
+
+                    System.out.println("\nYou defeated " + enemy.getName() + "!");
+                    System.out.println("Current streak: " + streak);
+                    System.out.println("Your HP: " + player.getHealth() + " / " + player.getMaxHealth());
+                    System.out.println("\nPress ENTER to face the next challenger...");
+                    // wait for ENTER (simple console pause)
+                    try { System.in.read(); } catch (Exception e) { /* ignore */ }
+                    continue;
+                } else {
+                    // Player lost
+                    System.out.println("\nYou were defeated by " + enemy.getName() + "!");
+                    System.out.println("FINAL STREAK: " + streak + " enemies defeated.");
+                    break;
+                }
+            }
         }
     }

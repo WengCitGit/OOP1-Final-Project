@@ -112,6 +112,11 @@ public abstract class Character {
         this.currMana = this.maxMana;
     }
 
+    public void healPercentage(double percent) {
+        if (percent <= 0) return;
+        int heal = (int) Math.ceil(this.maxHp * percent);
+        this.hp = Math.min(this.maxHp, this.hp + heal);
+    }
 
     // ====== Getters ======
     public String getName() {
