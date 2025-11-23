@@ -135,16 +135,16 @@ public class CharacterSelector {
     public Characters.Character getDevBoss(String name) {
         return new Characters.Character(
             name,           // name
-            1000,           // maxHp
+            600,           // maxHp
             100,            // maxMana
-            10,             // regenMana
+            12,             // regenMana
             "Dev Strike",   // basicSkillName
             "Dev Blast",    // secondarySkillName
             "Dev Ultimate", // ultimateSkillName
-            0, 0, 0,        // mana costs
-            50, 70,         // basic min/max damage
-            80, 120,        // secondary min/max damage
-            150, 200        // ultimate min/max damage
+            5, 8, 20,        // mana costs
+            20, 35,         // basic min/max damage
+            28, 40,        // secondary min/max damage
+            38, 75        // ultimate min/max damage
         ) {
             @Override
             public void basicAttack(Characters.Character target) {
