@@ -19,7 +19,7 @@ public class Wendys extends Character {
             35,    // ultimate mana cost
 
             // DAMAGE VALUES
-            10, 14,   // basic min-max dmg
+            10, 15,   // basic min-max dmg
             16, 22,   // secondary min-max dmg
             25, 40    // ultimate min-max dmg
         );

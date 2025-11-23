@@ -16,10 +16,10 @@ public class McDonalds extends Character {
             // MANA COSTS
             0,     // basic mana cost
             15,    // secondary mana cost
-            25,    // ultimate mana cost
+            30,    // ultimate mana cost
 
             // DAMAGE VALUES
-            10, 14,   // basic min-max dmg
+            10, 15,   // basic min-max dmg
             15, 22,   // secondary min-max dmg
             28, 45    // ultimate min-max dmg
         );

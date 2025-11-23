@@ -19,7 +19,7 @@ public class KFC extends Character {
             30,    // ultimate mana cost
 
             // DAMAGE VALUES
-            11, 15,   // basic min-max dmg
+            13, 17,   // basic min-max dmg
             18, 25,   // secondary min-max dmg
             28, 42    // ultimate min-max dmg
         );

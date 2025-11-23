@@ -16,7 +16,7 @@ public class BurgerKing extends Character {
             // MANA COSTS
             0,     // basic mana cost
             15,    // secondary mana cost
-            25,    // ultimate mana cost
+            30,    // ultimate mana cost
 
             // DAMAGE VALUES
             8, 12,     // basic min-max dmg

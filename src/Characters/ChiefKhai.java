@@ -54,13 +54,13 @@ public class ChiefKhai extends Character {
             
             // Mana Costs
             0,   // Basic
-            0,   // Secondary
-            0,   // Ultimate
+            18,   // Secondary
+            45,   // Ultimate
 
             // Damage values
-            45, 60,   // Basic min/max dmg
-            65, 95,   // Secondary min/max dmg
-            80, 120   // Ultimate min/max dmg
+            21, 32,   // Basic min/max dmg
+            30, 51,   // Secondary min/max dmg
+            41, 100   // Ultimate min/max dmg
         );
     }
 
