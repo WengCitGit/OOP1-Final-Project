@@ -58,9 +58,9 @@ public class ChiefKhai extends Character {
             0,   // Ultimate
 
             // Damage values
-            200, 300,   // Basic min/max dmg
-            30, 60,   // Secondary min/max dmg
-            40, 65   // Ultimate min/max dmg
+            45, 60,   // Basic min/max dmg
+            65, 95,   // Secondary min/max dmg
+            80, 120   // Ultimate min/max dmg
         );
     }
 

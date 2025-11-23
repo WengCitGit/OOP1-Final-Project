@@ -46,12 +46,15 @@ public class Main {
 
             // Handle info or exit
             if (mode == 5) {
+                music.stop();
+                music.play("arcade_bgm.wav");
                 gameInfo.displayGameInfo();
                 continue;
             } else if (mode == 6) {
                 exitGame(music, scan);
             }
 
+            
             startGameMode(mode, music);
 
             // Play again prompt
@@ -101,7 +104,7 @@ public class Main {
                 System.out.println("*  [1] Player vs Player (PVP)     *");
                 System.out.println("*  [2] Player vs Computer (PVC)   *");
                 System.out.println("*  [3] Endless Mode               *");
-                System.out.println("*  [4] Arcade Mode (Coming Soon)  *");
+                System.out.println("*  [4] Arcade Mode                *");
                 System.out.println("*  [5] Game Info / Lore           *");
                 System.out.println("*  [6] Exit Game                  *");
                 System.out.println("===================================");
@@ -141,6 +144,8 @@ public class Main {
                 break;
             case 4:
                 System.out.println("███████████████████████████████████████████████████████████████ STARTING ARCADE MODE ███████████████████████████████████████████████████████████████ ");
+                music.stop();
+                music.play("arcade_bgm.wav");
                 game.startArcadeMode();
                 break;
             default:

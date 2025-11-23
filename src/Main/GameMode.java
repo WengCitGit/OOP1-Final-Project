@@ -163,86 +163,69 @@ import Characters.ChiefKhai;
 
         // Placeholder for expanded Arcade Mode (option 4 in menu)
         public void startArcadeMode() {
-            System.out.println("\n--- ARCADE MODE ---");
-            System.out.println("Beat all characters and face the FINAL BOSS!");
-            System.out.println("But beware... some characters hide secrets.\n");
+                System.out.println("\n--- ARCADE MODE ---");
+                System.out.println("Beat all characters and face the FINAL BOSS!");
+                System.out.println("But beware... some characters hide secrets.\n");
 
-            
+                CharacterSelector selector = new CharacterSelector();
+                System.out.print("\nEnter your name for Arcade Mode: ");
+                String playerName = scan.nextLine().trim();
+                if (playerName.isEmpty()) playerName = "Player";
 
-            CharacterSelector selector = new CharacterSelector();
+                System.out.println("Choose your champion for Arcade Mode, " + playerName + ":");
+                Characters.Character chosenPlayer = selector.chooseCharacter();
+                boolean playerIsChiefKhai = chosenPlayer.getName().startsWith("Chief Khai");
 
-            System.out.print("\nEnter your name for Arcade Mode: ");
-            String playerName = scan.nextLine().trim();
-            if (playerName.isEmpty()) playerName = "Player";
+                // Make Chief Khai OP if chosen
+                Characters.Character player = playerIsChiefKhai ? new ChiefKhai(true) : chosenPlayer;
 
-            System.out.println("Choose your champion for Arcade Mode, " + playerName + ":");
-            Characters.Character chosenPlayer = selector.chooseCharacter();
-            boolean playerIsChiefKhai = chosenPlayer.getName().startsWith("Chief Khai");
+                // All character names
+                final String[] allNames = {
+                    "Jollibee - Crispy Joy Bringer",
+                    "McDo - Big Mac Basher",
+                    "KFC - Colonel's Drumstick Duelist",
+                    "Burger King - Flame Griller",
+                    "Wendy's - Sassy Red Fighter",
+                    "Jack in the Box - Trickster Clown",
+                    "Little Caesars - Pizza Gladiator",
+                    "Chief Khai - Whistle Warrior"
+                };
 
-            // Make Chief Khai OP if chosen
-            Characters.Character player = playerIsChiefKhai ? new ChiefKhai(true) : chosenPlayer;
-
-            // All character names
-            final String[] allNames = {
-                "Jollibee - Crispy Joy Bringer",
-                "McDo - Big Mac Basher",
-                "KFC - Colonel's Drumstick Duelist",
-                "Burger King - Flame Griller",
-                "Wendy's - Sassy Red Fighter",
-                "Jack in the Box - Trickster Clown",
-                "Little Caesars - Pizza Gladiator",
-                "Chief Khai - Whistle Warrior"
-            };
-
-            // Build enemy array safely
-            String[] enemyOrder;
-            if (playerIsChiefKhai) {
-                enemyOrder = new String[allNames.length - 1]; // 7 enemies
-            } else {
-                enemyOrder = new String[allNames.length - 2]; // 6 enemies, exclude Chief Khai
-            }
-
-            int index = 0;
-            for (String name : allNames) {
-                if (name.equalsIgnoreCase(chosenPlayer.getName())) continue; // skip player
-                if (!playerIsChiefKhai && name.startsWith("Chief Khai")) continue; // skip Chief Khai for others
-                enemyOrder[index++] = name;
-            }
-
-            // Shuffle enemies
-            Random r = new Random();
-            for (int i = 0; i < enemyOrder.length; i++) {
-                int swap = r.nextInt(enemyOrder.length);
-                String temp = enemyOrder[i];
-                enemyOrder[i] = enemyOrder[swap];
-                enemyOrder[swap] = temp;
-            }
-
-            int stage = 1;
-            int wins = 0;
-
-            // ====== FIGHT NORMAL ENEMIES ======
-            for (String enemyName : enemyOrder) {
-                System.out.println("\n===== ARCADE STAGE " + stage + " =====");
-                Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
-                System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
-
-                Battle battle = new Battle(player, enemy, true, playerName, enemy.getName());
-                battle.start();
-
-                if (!player.isAlive()) {
-                    System.out.println("\nYou were defeated by " + enemy.getName() + "!");
-                    System.out.println("Stages cleared: " + wins);
-                    return;
+                // Build enemy list safely
+                List<String> enemyOrder = new ArrayList<>();
+                for (String name : allNames) {
+                    if (name.equalsIgnoreCase(chosenPlayer.getName())) continue; // skip player
+                    if (!playerIsChiefKhai && name.startsWith("Chief Khai")) continue; // skip Chief Khai for others
+                    enemyOrder.add(name);
                 }
+                Collections.shuffle(enemyOrder); // randomize order
 
-                wins++;
-                stage++;
-                player.restoreHP();
-                System.out.println("\nYou defeated " + enemy.getName() + "!");
-                System.out.println("HP restored. Press ENTER to continue...");
-                try { System.in.read(); } catch (Exception e) {}
-            }
+                int stage = 1;
+                int wins = 0;
+                Random r = new Random();
+
+                // ====== FIGHT NORMAL ENEMIES ======
+                for (String enemyName : enemyOrder) {
+                    System.out.println("\n===== ARCADE STAGE " + stage + " =====");
+                    Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
+                    System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
+
+                    Battle battle = new Battle(player, enemy, true, playerName, enemy.getName());
+                    battle.start();
+
+                    if (!player.isAlive()) {
+                        System.out.println("\nYou were defeated by " + enemy.getName() + "!");
+                        System.out.println("Stages cleared: " + wins);
+                        return;
+                    }
+
+                    wins++;
+                    stage++;
+                    player.restoreHP();
+                    System.out.println("\nYou defeated " + enemy.getName() + "!");
+                    System.out.println("HP restored. Press ENTER to continue...");
+                    try { System.in.read(); } catch (Exception e) {}
+                }
 
             // ====== FINAL TWIST: Player is Chief Khai ======
             if (playerIsChiefKhai) {
@@ -290,14 +273,14 @@ import Characters.ChiefKhai;
                 System.out.println("\nCHIEF KHAI slowly turns—not toward the boss, but toward YOU." );
                 s(1600);
 
-                System.out.println("\nCHIEF KHAI: \"You brought me too close... They’re aware now.\"");
+                System.out.println("\nCHIEF KHAI: \"You brought me too close... They're aware now.\"");
                 s(1500);
 
                 System.out.println("The arena lights dim. Footstep echoes… but not from anyone present.");
                 System.out.println("It sounds like someone pacing on the other side of the screen.");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI: \"They’re watching us. Every frame. Every move.\"");
+                System.out.println("\nCHIEF KHAI: \"They're watching us. Every frame. Every move.\"");
                 s(1500);
 
                 System.out.println("\nCHIEF KHAI: \"I was assigned to them—the hands behind the code.");
@@ -308,10 +291,10 @@ import Characters.ChiefKhai;
                 System.out.println("\n>> WARNING: unauthorized_behavior_detected");
                 s(900);
 
-                System.out.println("Chief Khai’s body jerks sharply, like an unseen hand grabbed his shoulder.");
+                System.out.println("Chief Khai's body jerks sharply, like an unseen hand grabbed his shoulder.");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI: \"I’m sorry… I can’t fight their creators. I’m not allowed to.\"");
+                System.out.println("\nCHIEF KHAI: \"I'm sorry… I can't fight their creators. I'm not allowed to.\"");
                 s(1300);
 
                 System.out.println("Your inputs stop working completely. A soft static crackles in your headphones.");
@@ -324,33 +307,33 @@ import Characters.ChiefKhai;
                 System.out.println("""
                         
                               ░░░░░░░░░░░░░░░░░░░░░░                       
-                          ░░░░                      ░░░░                     ███████████ 
-                      ░░░░░░                          ░░░░░░               ░░███░░░░░███ 
-                    ░░░░                                  ░░░░              ░███    ░███  
-                  ░░                                          ▒▒            ░██████████  
-                ░░                                              ░░        
-              ░░░░                                              ░░░░      
-              ░░                                                  ░░      
-            ░░░░                                                  ░░░░    
+                          ░░░░                      ░░░░                    ███████████ 
+                      ░░░░░░                          ░░░░░░                  ███     ███ 
+                    ░░░░                                  ░░░░                ███     ███  
+                  ░░                                          ▒▒              ██████████  
+                ░░                                              ░░            ███     ███   
+              ░░░░                                              ░░░░          ███     ███ 
+              ░░                                                  ░░        ███████████ 
+            ░░░░                                                  ░░░░     
             ░░                                                      ░░░░  
-            ░░        ██████                          ██████        ░░░░  
-          ░░░░      ▓▓██  ░░                          ░░░░██▓▓      ░░░░  
-          ░░      ▓▓██░░                                  ░░██▓▓      ░░░░
-          ░░    ████  ████████████              ████████████  ████    ░░░░
-          ░░    ██  ████▒▒██████████        ░░██████████▒▒████  ██    ░░  
-          ░░        ▒▒▒▒▒▒        ██        ░░██        ▒▒▒▒▒▒        ░░  
-         ░░    ▒▒▒▒  ▒▒▒▒                              ▒▒▒▒  ▒▒▒▒    ░░░░
+            ░░        ██████                          ██████        ░░░░     █████   █████       
+          ░░░░      ▓▓██  ░░                          ░░░░██▓▓      ░░░░      ███     ███   
+          ░░      ▓▓██░░                                  ░░██▓▓      ░░░░      ███████  
+          ░░    ████  ████████████              ████████████  ████    ░░░░        ███  
+          ░░    ██  ████▒▒██████████        ░░██████████▒▒████  ██    ░░          ███  
+          ░░        ▒▒▒▒▒▒        ██        ░░██        ▒▒▒▒▒▒        ░░         █████ 
+         ░░    ▒▒▒▒  ▒▒▒▒                              ▒▒▒▒  ▒▒▒▒    ░░░░         
          ░░  ▒▒▒▒    ▒▒                                  ▒▒    ▒▒▒▒  ░░░░
-         ░░▒▒▒▒▒▒    ▒▒██████████████████████████████████▒▒    ▒▒▒▒▒▒░░░░
-         ▒▒▒▒▒▒      ▒▒                                  ▒▒      ▒▒▒▒▒▒░░
-         ▒▒▒▒▒▒    ▒▒▒▒                                  ▒▒▒▒    ▒▒▒▒▒▒░░
-         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒  
-         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░
-           ▒▒▒▒▒▒▒▒▒▒    ██████████████████████████████    ▒▒▒▒▒▒▒▒▒▒░░  
-            ▒▒▒▒▒▒        ██████████████████████████        ▒▒▒▒▒▒      
+         ░░▒▒▒▒▒▒    ▒▒██████████████████████████████████▒▒    ▒▒▒▒▒▒░░░░     ███████████    
+         ▒▒▒▒▒▒      ▒▒                                  ▒▒      ▒▒▒▒▒▒░░      ███      █                                             
+         ▒▒▒▒▒▒    ▒▒▒▒                                  ▒▒▒▒    ▒▒▒▒▒▒░░      ███   █
+         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒        ███████   
+         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░      ███   █                                                 
+           ▒▒▒▒▒▒▒▒▒▒    ██████████████████████████████    ▒▒▒▒▒▒▒▒▒▒░░        ███      █
+            ▒▒▒▒▒▒        ██████████████████████████        ▒▒▒▒▒▒            ███████████
                   ░░            ██████████████████            ░░          
                     ░░░░            ████████▓▓            ░░░░            
-                        ░░░░                          ░░░░                
+                        ░░░░                          ░░░░                -GAME DEVELOPERS ;)
                            ░░░░                  ░░░░                    
                                ░░░░░░░░░░░░░░░░░░                                    
                         """);
@@ -377,7 +360,7 @@ import Characters.ChiefKhai;
                 System.out.println("\nThe screen darkens. Only the static remains.");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI (whisper): \"They’re still watching. Don’t react.\"");
+                System.out.println("\nCHIEF KHAI (whisper): \"They're still watching. Don't react.\"");
                 s(1600);
 
                 System.out.println("CHIEF KHAI (whisper): \"If you want to free me… choices matter more than you know.\"");
@@ -456,13 +439,13 @@ import Characters.ChiefKhai;
             System.out.println("Something was taken from them—joy, freedom, choice—and it forced them into battles they never asked for.");
             s(1400);
 
-            System.out.println("\nCHIEF KHAI (weakly): \"You’ve won… but remember… victory isn’t always freedom.\"");
+            System.out.println("\nCHIEF KHAI (weakly): \"Yo've won… but remember… victory isn't always freedom.\"");
             s(1300);
 
             System.out.println("The screen flickers gently. You sense a quiet understanding pass between you and the characters.");
             s(1200);
 
-            System.out.println("\nA feeling of closure… and the faint hope that one day, they’ll reclaim what was taken.");
+            System.out.println("\nA feeling of closure… and the faint hope that one day, they'll reclaim what was taken.");
             s(1500);
 
             System.out.println("\nTHE END (Secret Resolution Unlocked)");

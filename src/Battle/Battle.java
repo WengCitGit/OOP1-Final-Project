@@ -143,7 +143,11 @@ public class Battle {
         }
 
     // Match winner
-    System.out.println("\n──────────────────────── MATCH END ────────────────────────");
+            System.out.println();
+            System.out.println("                                                          ╒══════════════════════════════╕");
+            System.out.println(" ──────────────────────────────────────────────────────────           MATCH ENDED        ───────────────────────────────────────────────────────── ");
+            System.out.println("                                                          ╘══════════════════════════════╛    ");
+
     if (player1Wins > player2Wins) {
         System.out.println("OVERALL WINNER: " + getDisplayWithCharacterName(player1) + "!");
     } else {
@@ -293,7 +297,7 @@ public class Battle {
     }
 
     private void showStats() {
-        System.out.println("\n█================================== STATUS ==================================");
+        System.out.println("\n█======================================= STATUS =======================================");
 
         System.out.println("█     " + getDisplayWithCharacterName(player1) + 
             ": HP " + player1.getHealth() + "/" + player1.getMaxHealth() +
@@ -303,7 +307,7 @@ public class Battle {
             ": HP " + player2.getHealth() + "/" + player2.getMaxHealth() +
             " | Mana " + player2.getCurrentMana() + "/" + player2.getMaxMana());
                 
-        System.out.println("█============================================================================ ");
+        System.out.println("█====================================================================================== ");
         System.out.println();
     }
 }

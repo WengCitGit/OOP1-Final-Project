@@ -61,7 +61,7 @@ public class GameInfo {
             |    and bending the rules.                                                                              |
             |                                                                                                        |
             |    Rumors whisper through arenas and kitchens: strange glitches, masked figures, and vanishing         |
-            |    messages. The heroes sense it—a presence orchestrating chaos, rewarding victory one moment,         |
+            |    messages. The heroes sense it's presence orchestrating chaos, rewarding victory one moment,         |
             |    punishing mercy the next. No one knows who controls the strings, but every battle seems to          |
             |    serve a hidden purpose.                                                                             |
             |                                                                                                        |
@@ -168,7 +168,7 @@ public class GameInfo {
                         After Jollibee was adopted from the orphanage, McDonalds and his brother 
                         stayed behind. But instead of letting despair consume them, they dreamed 
                         bigger. Together, they built a small circus—bright lights, painted faces, 
-                        and the sound of children’s laughter filling every corner. Their circus 
+                        and the sound of children's laughter filling every corner. Their circus 
                         became a place where broken hearts could heal and forgotten souls could 
                         smile again. Side by side, the Clown Brothers spread happiness across 
                         towns, believing that joy was the greatest gift they could give.
@@ -224,7 +224,7 @@ public class GameInfo {
                         Now, a new storm brews. Rival mascots, greedy corporations, and twisted 
                         chefs threaten to consume the world in chaos and gluttony. The Colonel 
                         enters the Fast Feuds not for glory—but for his family. He fights to 
-                        protect his wife, who now stands as the orphanage’s beating heart, and 
+                        protect his wife, who now stands as the orphanage's beating heart, and 
                         to test his children, ensuring they are strong enough to face whatever 
                         darkness comes next.            
 
@@ -243,7 +243,7 @@ public class GameInfo {
 
                         The Crowned Prince of the Whopper Empire. A royal born with flame in his
                         blood and pride in his crown. Though raised in golden halls, he never forgot
-                        the taste of the streets. Beneath his regal charm lies a warrior’s heart, 
+                        the taste of the streets. Beneath his regal charm lies a warrior's heart, 
                         fueled by flame-grilled honor and a thirst for challenge. Known for his 
                         confident grin and fiery wit, Burger King believes that true royalty is not 
                         inherited, it is earned, one victory at a time.
@@ -252,7 +252,7 @@ public class GameInfo {
                         WHERE (THE ORIGIN):
 
                         As a child, the young prince was sent to an orphanage in secret after assassins 
-                        threatened his family’s throne. Hidden among ordinary children, he learned 
+                        threatened his family's throne. Hidden among ordinary children, he learned 
                         humility, hunger, and the simple joy of a freshly grilled burger. Years later, 
                         when the truth of his lineage was revealed, he reclaimed his title not with 
                         armies, but with ambition, rebuilding the Whopper Empire from the ashes. Now, 
@@ -283,7 +283,7 @@ public class GameInfo {
                         WHO (THE HERO): 
 
                         Wendy is the only girl in the orphanage, known for her fiery spirit and quick wit. 
-                        She became the favorite of Colonel KFC’s wife, who treated her like a daughter. 
+                        She became the favorite of Colonel KFC's wife, who treated her like a daughter. 
                         Though young, she carries the weight of loss and responsibility on her shoulders. 
                         Her charm hides a fierce determination to survive and protect those she loves.
 
@@ -296,10 +296,10 @@ public class GameInfo {
                         WHY (THE MOTIVATION):
 
                         Though she smiles and plays like the other children, she harbors a deep secret.
-                        she recently discovered that the one responsible for her father’s death is somewhere 
-                        in this chaotic game world. She doesn’t yet know who, only that the answer lies within 
+                        she recently discovered that the one responsible for her father's death is somewhere 
+                        in this chaotic game world. She doesn't yet know who, only that the answer lies within 
                         the arena of the game. Her journey is fueled by the desire for justice and closure, 
-                        tempered by the love she received from KFC’s wife—a reminder of what she is fighting 
+                        tempered by the love she received from KFC's wife—a reminder of what she is fighting 
                         to protect, and why she cannot afford to lose.            
 
 
@@ -324,11 +324,11 @@ public class GameInfo {
                         WHERE (THE ORIGIN):
 
                         When the McDo Brothers left the orphanage to bring laughter to the world, 
-                        Jack followed. He wasn’t born for the spotlight, but his hands built the 
-                        magic that made the crowd cheer. But as the circus grew brighter, Jack’s 
+                        Jack followed. He wasn't born for the spotlight, but his hands built the 
+                        magic that made the crowd cheer. But as the circus grew brighter, Jack's 
                         ambitions grew sharper. He eventually left to start something of his own—a 
                         breakfast franchise where every meal was a masterpiece, every morning a new 
-                        beginning. For a while, it was perfect. The world loved Jack’s creations. 
+                        beginning. For a while, it was perfect. The world loved Jack's creations. 
                         He had finally stepped out of the box.
 
 
@@ -336,8 +336,8 @@ public class GameInfo {
 
                         Everything changed when a contamination scandal struck. The burgers—his 
                         pride—turned poisonous, and all fingers pointed to him. Branded a villain, 
-                        Jack vanished into the shadows, clutching the only clue: the burger wasn’t 
-                        his failure, but someone’s sabotage. Now, he’s on a mission to find the 
+                        Jack vanished into the shadows, clutching the only clue: the burger wasn't 
+                        his failure, but someone's sabotage. Now, he's on a mission to find the 
                         antidote, clear his name, and uncover the truth behind the corruption. 
                         Beneath the mask of calm lies a storm—a man fighting not just for redemption, 
                         but for the trust he lost and the taste of justice he deserves.
@@ -363,12 +363,12 @@ public class GameInfo {
 
                         WHERE (THE ORIGIN):
 
-                        While traveling the world delivering charity, he stumbled upon KFC’s orphanage 
+                        While traveling the world delivering charity, he stumbled upon KFC's orphanage 
                         and was moved by its mission. Inspired, he began donating and personally aiding 
                         the children, leaving traces of his kindness in every corner. In 1985, his Love 
                         Kitchen initiative started providing free pizza to the hungry and homeless 
                         nationwide. Every journey strengthened his resolve to protect the innocent from 
-                        the world’s harshness.
+                        the world's harshness.
                         
 
                         WHY (THE MOTIVATION):
@@ -399,7 +399,7 @@ public class GameInfo {
 
                         WHERE (THE ORIGIN):
 
-                        He wandered from chain to chain—McDo, KFC, Jollibee, Wendy’s, always the 
+                        He wandered from chain to chain—McDo, KFC, Jollibee, Wendy's, always the 
                         same uniform, always the same whistle. Nobody questioned why every branch 
                         had the same face guarding its doors. He was everywhere, yet belonged nowhere, 
                         like a shadow hired to keep order but also to keep secrets.
@@ -407,10 +407,10 @@ public class GameInfo {
 
                         WHY (THE MOTIVATION):
 
-                        What people don’t know is that Kuya Guard is deep in debt. Someone offered him 
-                        money he couldn’t refuse. In exchange, he follows their orders, keeping the 
+                        What people don't know is that Kuya Guard is deep in debt. Someone offered him 
+                        money he couldn't refuse. In exchange, he follows their orders, keeping the 
                         players in line, blocking their joy, and maintaining control. He tells himself 
-                        it’s only for survival… but behind every whistle, there is guilt. And the players 
+                        it's only for survival… but behind every whistle, there is guilt. And the players 
                         must never discover who he truly serves—at least, not yet.
 
 
