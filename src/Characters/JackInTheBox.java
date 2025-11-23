@@ -4,26 +4,27 @@ public class JackInTheBox extends Character {
     public JackInTheBox() {
         super(
             "Jack In The Box",
-            165,       // Max HP
-            60,        // Max Mana
-            2,         // Mana Regen
+            165,   // max HP
+            60,    // max Mana
+            5,     // mana regen
 
-            // Skill names
+            // SKILL NAMES
             "Giant Headbutt Express",
             "Drive-Thru Confusion",
             "Titanic Jumbo Jack Combo",
 
-            // Mana Costs
-            0,    // Basic
-            20,   // Secondary
-            35,   // Ultimate
+            // MANA COSTS
+            0,     // basic mana cost
+            20,    // secondary mana cost
+            35,    // ultimate mana cost
 
-            // Damage values
-            11, 16,   // Basic min/max dmg
-            15, 24,   // Secondary min/max dmg
-            24, 60    // Ultimate min/max dmg
+            // DAMAGE VALUES
+            10, 14,   // basic min-max dmg
+            15, 22,   // secondary min-max dmg
+            28, 45    // ultimate min-max dmg
         );
     }
+
 
     @Override
     public void basicAttack(Character target) {

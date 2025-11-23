@@ -2,7 +2,7 @@ package Main;
 import java.util.Scanner;
 
 public class GameInfo {
-     private static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
 
     public void displayGameInfo() {
         while (true) {
@@ -44,11 +44,15 @@ public class GameInfo {
          '__________________________________________________________________________________________________________'|
             |                                                                                                        |
             |                                                                                                        |
-            |                                                                                                        |
             |    In a world where fast food mascots are more than mere icons, an invisible storm brews.              |
             |    Rivalries spark, alliances form, and battles erupt across cities, kitchens, and                     |
             |    abandoned amusement parks. Once symbols of joy and comfort, the mascots are now drawn               |
             |    into a mysterious competition—where the stakes are higher than fries, chicken, or pizza.            |
+            |                                                                                                        |
+            |    All the mascots share one truth: they never wanted to fight. They do not enjoy combat, yet          |
+            |    each was forced into this chaos because something precious was taken from them. Never did           |
+            |    they imagine facing familiar faces across the battlefield,  friends and allies turned rivals        |
+            |    in a game with unseen rules.                                                                        |
             |                                                                                                        |       
             |    The orphanage, once a sanctuary of warmth and discipline under Colonel KFC and his wife,            |
             |    has become a central beacon for these heroes. Each mascot has a connection—whether as a             |
@@ -69,6 +73,7 @@ public class GameInfo {
             |    The battle has begun—but the real war is still unseen. Only the strongest, cleverest, and           |
             |    most determined will survive the coming storm… and perhaps uncover the truth behind the             |
             |    invisible hand controlling it all.                                                                  |
+            |                                                                                                        |
             |                                                                                                        |
          ___________________________________________________________________________________________________________ |
     ()==(                                                                                                          (@==()
@@ -297,7 +302,7 @@ public class GameInfo {
                         tempered by the love she received from KFC’s wife—a reminder of what she is fighting 
                         to protect, and why she cannot afford to lose.            
 
-                       
+
                         """);
 
                     case "6" -> System.out.println("""

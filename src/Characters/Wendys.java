@@ -4,25 +4,27 @@ public class Wendys extends Character {
     public Wendys() {
         super(
             "Wendys",
-            165,   // Max HP
-            60,    // Max Mana
-            4,     // Mana Regen
+            165,   // max HP
+            60,    // max Mana
+            8,     // mana regen
+
+            // SKILL NAMES
             "Sassy Roast",
             "Vanilla Vengeance",
             "Order Blocker",
 
-            // Mana Costs
-            0,     // Basic
-            14,    // Secondary
-            35,    // Ultimate
+            // MANA COSTS
+            0,     // basic mana cost
+            14,    // secondary mana cost
+            35,    // ultimate mana cost
 
-            // Damage Ranges
-            10, 15,   // Basic min/max
-            16, 25,   // Secondary min/max
-            15, 25    // Ultimate min/max
+            // DAMAGE VALUES
+            10, 14,   // basic min-max dmg
+            16, 22,   // secondary min-max dmg
+            25, 40    // ultimate min-max dmg
         );
     }
-
+    
     @Override
     public void basicAttack(Character target) {
         performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), "Sassy Roast");

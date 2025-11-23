@@ -4,22 +4,24 @@ public class KFC extends Character {
     public KFC() {
         super(
             "Kentucky Fried Chicken",
-            165,   // Max HP
-            55,    // Max Mana
-            3,     // Mana Regen
+            165,   // max HP
+            55,    // max Mana
+            5,     // mana regen
+
+            // SKILL NAMES
             "DrumStick Smash",
             "Shooting Flaming Hotshot",
             "Secret Sauce Overload",
 
-            // Mana Costs
-            0,     // Basic
-            20,    // Secondary
-            30,    // Ultimate
+            // MANA COSTS
+            0,     // basic mana cost
+            20,    // secondary mana cost
+            30,    // ultimate mana cost
 
-            // Damage Ranges
-            13, 17,   // Basic min/max
-            22, 28,   // Secondary min/max
-            30, 40    // Ultimate min/max
+            // DAMAGE VALUES
+            11, 15,   // basic min-max dmg
+            18, 25,   // secondary min-max dmg
+            28, 42    // ultimate min-max dmg
         );
     }
 

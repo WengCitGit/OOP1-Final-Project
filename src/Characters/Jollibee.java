@@ -4,22 +4,24 @@ public class Jollibee extends Character {
     public Jollibee() {
         super(
             "Jollibee",
-            160,   // Max HP
-            60,    // Max Mana
-            15,    // Mana Regen
+            165,   // max HP
+            60,    // max Mana
+            7,     // mana regen
+
+            // SKILL NAMES
             "Juicylicious Crispy Chicken Joy Slam",
             "Langhap Sarap Aura",
             "Super Meal Combo Domination",
-            
-            // Mana Costs
-            0,     // Basic
-            12,    // Secondary
-            25,    // Ultimate
-            
-            // Damage Ranges
-            10, 16,    // Basic min/max
-            14, 20,    // Secondary min/max
-            24, 55     // Ultimate min/max
+
+            // MANA COSTS
+            0,     // basic mana cost
+            12,    // secondary mana cost
+            25,    // ultimate mana cost
+
+            // DAMAGE VALUES
+            10, 14,   // basic min-max dmg
+            14, 20,   // secondary min-max dmg
+            28, 45    // ultimate min-max dmg
         );
     }
 

@@ -101,8 +101,8 @@ public abstract class Character {
     }
 
     public void addMana(int amount) {
-       this.currMana = Math.min(this.maxMana, this.currMana + amount);
-   }
+        this.currMana = Math.min(this.maxMana, this.currMana + amount);
+    }
 
     public void restoreHP() {
         this.hp = this.maxHp;
@@ -149,6 +149,10 @@ public abstract class Character {
 
     public String getUltimateSkillName() {
         return this.ultimateSkillName;
+    }
+
+    public int getRegenMana() {
+        return this.regenMana;
     }
 
 

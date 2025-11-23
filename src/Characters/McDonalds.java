@@ -4,22 +4,24 @@ public class McDonalds extends Character {
     public McDonalds() {
         super(
             "McDonalds",
-            165,   // Max HP
-            55,    // Max Mana
-            15,    // Mana Regen
+            165,   // max HP
+            55,    // max Mana
+            7,     // mana regen
+
+            // SKILL NAMES
             "Frosty McFlurry Blast",
             "Crispy BFF Fries Fury",
             "Colossal BIG MAC Slam",
 
-            // Mana Costs
-            0,     // Basic
-            15,    // Secondary
-            25,    // Ultimate
+            // MANA COSTS
+            0,     // basic mana cost
+            15,    // secondary mana cost
+            25,    // ultimate mana cost
 
-            // Damage Ranges
-            10, 15,   // Basic min/max
-            15, 22,   // Secondary min/max
-            25, 58    // Ultimate min/max
+            // DAMAGE VALUES
+            10, 14,   // basic min-max dmg
+            15, 22,   // secondary min-max dmg
+            28, 45    // ultimate min-max dmg
         );
     }
 

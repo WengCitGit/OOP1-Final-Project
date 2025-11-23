@@ -1,4 +1,6 @@
 package Main;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import Characters.*;
 
@@ -18,10 +20,30 @@ public class CharacterSelector {
 
     };
 
+    public Characters.Character[] getAllCharacters() {
+        Characters.Character[] chars = {
+            new Jollibee(),
+            new McDonalds(),
+            new KFC(),
+            new BurgerKing(),
+            new Wendys(),
+            new JackInTheBox(),
+            new LittleCaesars(),
+            new ChiefKhai()
+        };
+
+        // Set proper names (with your titles)
+        for (int i = 0; i < chars.length; i++) {
+            chars[i].setName(names[i]);
+        }
+        return chars;
+    }
+
+
     public Characters.Character chooseCharacter() {
         int choice = 0;
 
-        System.out.println("=================================================*");
+        System.out.println("==================================================");
         System.out.println("*  1. Jollibee - Crispy Joy Bringer              *");
         System.out.println("*  2. McDo - Big Mac Basher                      *");
         System.out.println("*  3. KFC - Colonel's Drumstick Duelist          *");
@@ -31,7 +53,7 @@ public class CharacterSelector {
         System.out.println("*  7. Little Caesars - Pizza Gladiator           *");
         System.out.println("*  8. Chief Khai - Whistle Warrior               *");
         System.out.println("==================================================");
-       
+        
         while (true) {
             System.out.print("Enter choice (1-8): ");
 
@@ -87,7 +109,81 @@ public class CharacterSelector {
         }
     }
 
+    public Characters.Character getCharacterByName(String name) {
+        Characters.Character[] list = getAllCharacters();
+
+        for (int i = 0; i < list.length; i++) {
+
+            // Exact match (full title, trimmed)
+            if (list[i].getName().trim().equalsIgnoreCase(name.trim())) {
+                return list[i];
+            }
+
+            // Match just the first word (e.g., "Jollibee")
+            String shortName = list[i].getName().split(" - ")[0];
+
+            if (shortName.equalsIgnoreCase(name)) {
+                return list[i];
+            }
+        }
+
+        return null;
+    }
+
+
     
+    public Characters.Character getDevBoss(String name) {
+        return new Characters.Character(
+            name,           // name
+            1000,           // maxHp
+            100,            // maxMana
+            10,             // regenMana
+            "Dev Strike",   // basicSkillName
+            "Dev Blast",    // secondarySkillName
+            "Dev Ultimate", // ultimateSkillName
+            0, 0, 0,        // mana costs
+            50, 70,         // basic min/max damage
+            80, 120,        // secondary min/max damage
+            150, 200        // ultimate min/max damage
+        ) {
+            @Override
+            public void basicAttack(Characters.Character target) {
+                performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), getBasicSkillName());
+            }
+
+            @Override
+            public void secondarySkill(Characters.Character target) {
+                performAttack(target, getSecondaryMinDmg(), getSecondaryMaxDmg(), getSecondaryManaCost(), getSecondarySkillName());
+            }
+
+            @Override
+            public void ultimateSkill(Characters.Character target) {
+                performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), getUltimateSkillName());
+            }
+        };
+    }
+
+    public Characters.Character chooseRandomCharacterExcluding(Characters.Character exclude) {
+        Characters.Character[] all = getAllCharacters();
+        List<Characters.Character> filtered = new ArrayList<>();
+
+        for (Characters.Character c : all) {
+            if (!c.getName().equalsIgnoreCase(exclude.getName())) {
+                filtered.add(c);
+            }
+        }
+
+        int choice = (int) (Math.random() * filtered.size());
+        Characters.Character chosen = filtered.get(choice);
+
+        System.out.println();
+        System.out.println("Computer has selected character: " + chosen.getName() + ".");
+        System.out.println();
+
+        return chosen;
+    }
+
+
 }
 
 

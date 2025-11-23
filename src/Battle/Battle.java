@@ -62,7 +62,10 @@ public class Battle {
             player1.restoreMana();
             player2.restoreMana();
 
-            System.out.println("\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ROUND " + round + " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+            System.out.println();
+            System.out.println("                                                          ╒══════════════════════════════╕");
+            System.out.println(" ----------------------------------------------------------            ROUND " + round + "           ---------------------------------------------------------- ");
+            System.out.println("                                                          ╘══════════════════════════════╛    ");
 
             int turn = 1;
             boolean player1Starts = random.nextBoolean();
@@ -85,7 +88,8 @@ public class Battle {
 
                 decrementCooldowns(current);
 
-                System.out.println("\n══════════ ROUND " + round + " - TURN " + turn + " ══════════");
+                System.out.println("\n                                                         ══════════ ROUND " + round + " - TURN " + turn + " ══════════");
+                System.out.println();
                 System.out.println(">>> " + getDisplayWithCharacterName(current) + "'s Turn! <<<");
                 showStats();
 
@@ -104,16 +108,16 @@ public class Battle {
 
                 // Random mana regen every after turns for each player
                 if (turn % 2 == 0) {
-                    
-                    int p1Regen = 5 + random.nextInt(6); // 5 to 10
-                    int p2Regen = 5 + random.nextInt(6); // 5 to 10
+                    int p1Regen = player1.getRegenMana();
+                    int p2Regen = player2.getRegenMana();
 
-                    
                     player1.addMana(p1Regen);
                     player2.addMana(p2Regen);
 
-                    System.out.println("\n> Mana Regen: " + getDisplayWithCharacterName(player1) + " +" + p1Regen + " | " + getDisplayWithCharacterName(player2) + " +" + p2Regen);
+                    System.out.println("\n> Mana Regen: " + getDisplayWithCharacterName(player1) + " +" + p1Regen +
+                                    " | " + getDisplayWithCharacterName(player2) + " +" + p2Regen);
                 }
+
 
                 turn++;
             }
@@ -145,6 +149,9 @@ public class Battle {
     } else {
         System.out.println("OVERALL WINNER: " + getDisplayWithCharacterName(player2) + "!");
     }
+
+    
+
 }
 
     // --- COOLDOWN HELPERS ---
@@ -286,16 +293,17 @@ public class Battle {
     }
 
     private void showStats() {
-        System.out.println("\n******************--- STATUS ---*********************");
+        System.out.println("\n█================================== STATUS ==================================");
 
-        System.out.println(getDisplayWithCharacterName(player1) + 
+        System.out.println("█     " + getDisplayWithCharacterName(player1) + 
             ": HP " + player1.getHealth() + "/" + player1.getMaxHealth() +
             " | Mana " + player1.getCurrentMana() + "/" + player1.getMaxMana());
 
-        System.out.println(getDisplayWithCharacterName(player2) + 
+        System.out.println("█     "+ getDisplayWithCharacterName(player2) + 
             ": HP " + player2.getHealth() + "/" + player2.getMaxHealth() +
             " | Mana " + player2.getCurrentMana() + "/" + player2.getMaxMana());
                 
-        System.out.println("*****************************************************");
+        System.out.println("█============================================================================ ");
+        System.out.println();
     }
 }
