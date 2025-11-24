@@ -71,7 +71,7 @@ public class GameInfo {
             |    behind the screen?                                                                                  |
             |                                                                                                        |
             |    The battle has begun, but the real war is still unseen. Only the strongest, cleverest, and          |
-            |    most determined will survive the coming storm... and perhaps uncover the truth behind the             |
+            |    most determined will survive the coming storm... and perhaps uncover the truth behind the           |
             |    invisible hand controlling it all.                                                                  |
             |                                                                                                        |
             |                                                                                                        |
