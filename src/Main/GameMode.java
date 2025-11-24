@@ -193,7 +193,7 @@ import Characters.ChiefKhai;
 
         // Placeholder for expanded Arcade Mode (option 4 in menu)
         public void startArcadeMode() {
-                System.out.println("\n--- ARCADE MODE ---");
+                System.out.println();
                 System.out.println("Beat all characters and face the FINAL BOSS!");
                 System.out.println("But beware... some characters hide secrets.\n");
 

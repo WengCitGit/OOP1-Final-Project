@@ -45,7 +45,7 @@ public class CharacterSelector {
 
         System.out.println("==================================================");
         System.out.println("*  1. Jollibee - Crispy Joy Bringer              *");
-        System.out.println("*  2. McDonald's - Big Mac Basher                      *");
+        System.out.println("*  2. McDonald's - Big Mac Basher                *");
         System.out.println("*  3. KFC - Colonel's Drumstick Duelist          *");
         System.out.println("*  4. Burger King - Flame Griller                *");
         System.out.println("*  5. Wendy's - Sassy Red Fighter                *");
@@ -135,8 +135,8 @@ public class CharacterSelector {
     public Characters.Character getDevBoss(String name) {
         return new Characters.Character(
             name,           // name
-            600,           // maxHp
-            100,            // maxMana
+            250,           // maxHp
+            80,            // maxMana
             12,             // regenMana
             "Dev Strike",   // basicSkillName
             "Dev Blast",    // secondarySkillName
