@@ -76,7 +76,8 @@ public class Simulator {
             if (r.name != null && r.name.length() > maxNameLen) maxNameLen = r.name.length();
         }
 
-        System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%    Wins     BossWins");
+        // First leaderboard: includes boss wins column
+        System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%   Wins   BossWins");
 
         int rank = 1;
         for (Result r : results) {
@@ -88,6 +89,24 @@ public class Simulator {
             int gap = maxNameLen - (r.name == null ? 0 : r.name.length()) + 1;
             String pad = spaces(gap);
             String row = rank + " " + r.name + pad + winStr + "   " + winsStr + "   " + bossStr;
+            System.out.println(row);
+            rank++;
+        }
+
+        // Second leaderboard: opponent-only (without dev bosses)
+        System.out.println();
+        System.out.println("=============== SIMULATOR LEADERBOARD (Vs Random Opponents Only) ===============");
+        System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%   Wins");
+
+        rank = 1;
+        for (Result r : results) {
+            double v = Math.round(r.winRate * 10.0) / 10.0;
+            String winStr = v + "%";
+            String winsStr = r.wins + "/" + SIM_ROUNDS;
+
+            int gap = maxNameLen - (r.name == null ? 0 : r.name.length()) + 1;
+            String pad = spaces(gap);
+            String row = rank + " " + r.name + pad + winStr + "   " + winsStr;
             System.out.println(row);
             rank++;
         }
