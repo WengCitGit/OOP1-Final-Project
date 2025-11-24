@@ -4,7 +4,7 @@ public class JackInTheBox extends Character {
     public JackInTheBox() {
         super(
             "Jack In The Box",
-            165,   // max HP
+            160,   // max HP
             60,    // max Mana
             5,     // mana regen
 

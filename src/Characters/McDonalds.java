@@ -4,8 +4,8 @@ public class McDonalds extends Character {
     public McDonalds() {
         super(
             "McDonalds",
-            165,   // max HP
-            55,    // max Mana
+            160,   // max HP
+            60,    // max Mana
             7,     // mana regen
 
             // SKILL NAMES

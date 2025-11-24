@@ -4,7 +4,7 @@ public class LittleCaesars extends Character {
     public LittleCaesars() {
         super(
             "Little Caesars",
-            170,   // max HP
+            165,   // max HP
             55,    // max Mana
             5,     // mana regen
 

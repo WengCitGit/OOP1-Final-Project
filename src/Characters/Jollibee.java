@@ -5,7 +5,7 @@ public class Jollibee extends Character {
         super(
             "Jollibee",
             165,   // max HP
-            60,    // max Mana
+            55,    // max Mana
             7,     // mana regen
 
             // SKILL NAMES
