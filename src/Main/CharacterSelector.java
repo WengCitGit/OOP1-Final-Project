@@ -136,12 +136,12 @@ public class CharacterSelector {
         return new Characters.Character(
             name,           // name
             375,           // maxHp
-            70,            // maxMana
+            100,            // maxMana
             8,             // regenMana
             "Dev Strike",   // basicSkillName
             "Dev Blast",    // secondarySkillName
             "Dev Ultimate", // ultimateSkillName
-            10, 15, 30,        // mana costs
+            5, 10, 30,        // mana costs
             5, 8,         // basic min/max damage
             7, 12,        // secondary min/max damage
             12, 15        // ultimate min/max damage
