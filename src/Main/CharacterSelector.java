@@ -168,9 +168,14 @@ public class CharacterSelector {
         List<Characters.Character> filtered = new ArrayList<>();
 
         for (Characters.Character c : all) {
-            if (!c.getName().equalsIgnoreCase(exclude.getName())) {
+            if (c != null && !c.getName().equalsIgnoreCase(exclude.getName())) {
                 filtered.add(c);
             }
+        }
+
+        if (filtered.isEmpty()) {
+            System.out.println("No characters available to choose from!");
+            return null;
         }
 
         int choice = (int) (Math.random() * filtered.size());
@@ -182,7 +187,6 @@ public class CharacterSelector {
 
         return chosen;
     }
-
 
 }
 

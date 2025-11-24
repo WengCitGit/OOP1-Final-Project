@@ -212,7 +212,7 @@ import Characters.ChiefKhai;
                 // All character names
                 final String[] allNames = {
                     "Jollibee - Crispy Joy Bringer",
-                    "McDo - Big Mac Basher",
+                    "McDonald's - Big Mac Basher",
                     "KFC - Colonel's Drumstick Duelist",
                     "Burger King - Flame Griller",
                     "Wendy's - Sassy Red Fighter",
@@ -220,6 +220,7 @@ import Characters.ChiefKhai;
                     "Little Caesars - Pizza Gladiator",
                     "Chief Khai - Whistle Warrior"
                 };
+
 
                 // Build enemy list safely
                 List<String> enemyOrder = new ArrayList<>();
@@ -237,10 +238,17 @@ import Characters.ChiefKhai;
                 // ====== FIGHT NORMAL ENEMIES ======
                 for (String enemyName : enemyOrder) {
                     System.out.println("\n===== ARCADE STAGE " + stage + " =====");
-                    Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
-                    System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
 
-                    // Use a generic enemy label so in-arcade UI shows "Enemy (Character)"
+                    Characters.Character enemy = selector.getCharacterByName(enemyName.trim()); // declare once
+                    if (enemy == null) {
+                        System.out.println("ERROR: Enemy " + enemyName + " not found! Skipping stage.");
+                        stage++;
+                        continue; // skip this enemy
+                    }   
+
+                    System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) 
+                                    + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
+
                     Battle battle = new Battle(player, enemy, true, playerName, "Enemy");
                     battle.start();
 
@@ -255,8 +263,6 @@ import Characters.ChiefKhai;
                     player.restoreHP();
                     System.out.println("\nYou defeated " + enemy.getName() + "!");
                     System.out.println("HP restored. Press ENTER to continue...");
-                    // Use the shared Scanner to consume the newline cleanly so Main.askPlayAgain()
-                    // doesn't see leftover input and prompt twice.
                     scan.nextLine();
                 }
 
