@@ -6,7 +6,7 @@ public class Wendys extends Character {
             "Wendys",
             165,   // max HP
             55,    // max Mana
-            8,     // mana regen
+            6,     // mana regen
 
             // SKILL NAMES
             "Sassy Roast",
@@ -15,13 +15,13 @@ public class Wendys extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            12,    // secondary mana cost
-            26,    // ultimate mana cost
+            14,    // secondary mana cost
+            32,    // ultimate mana cost
 
             // DAMAGE VALUES
-            11, 15,   // basic min-max dmg
-            17, 35,   // secondary min-max dmg
-            33, 43    // ultimate min-max dmg
+            12, 17,   // basic min-max dmg
+            21, 31,   // secondary min-max dmg
+            30, 48    // ultimate min-max dmg
         );
     }
     

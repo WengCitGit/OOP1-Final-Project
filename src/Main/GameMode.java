@@ -280,7 +280,7 @@ import Characters.ChiefKhai;
 
                 System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
                 System.out.println("                                      █                                                                          █");
-                System.out.println("                                      █                         F I N A L   E N C O U N T E R                    █");
+                System.out.println("                                      █                        F I N A L   E N C O U N T E R                     █");
                 System.out.println("                                      █                                                                          █");
                 System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
                 System.out.println("As you approach the final arena, the background flickers");

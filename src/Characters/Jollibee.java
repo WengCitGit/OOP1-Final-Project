@@ -6,7 +6,7 @@ public class Jollibee extends Character {
             "Jollibee",
             165,   // max HP
             55,    // max Mana
-            7,     // mana regen
+            6,     // mana regen
 
             // SKILL NAMES
             "Juicylicious Crispy Chicken Joy Slam",
@@ -16,12 +16,12 @@ public class Jollibee extends Character {
             // MANA COSTS
             0,     // basic mana cost
             13,    // secondary mana cost
-            27,    // ultimate mana cost
+            30,    // ultimate mana cost
 
             // DAMAGE VALUES
-            13, 17,   // basic min-max dmg
-            19, 37,   // secondary min-max dmg
-            35, 45      // ultimate min-max dmg
+            12, 17,   // basic min-max dmg
+            20, 30,   // secondary min-max dmg
+            30, 48      // ultimate min-max dmg
         );
     }
 

@@ -6,7 +6,7 @@ public class JackInTheBox extends Character {
             "Jack In The Box",
             160,   // max HP
             60,    // max Mana
-            5,     // mana regen
+            7,     // mana regen
 
             // SKILL NAMES
             "Giant Headbutt Express",
@@ -15,13 +15,13 @@ public class JackInTheBox extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            15,    // secondary mana cost
-            31,    // ultimate mana cost
+            13,    // secondary mana cost
+            28,    // ultimate mana cost
 
             // DAMAGE VALUES
-            8, 12,   // basic min-max dmg
-            14, 28,   // secondary min-max dmg
-            30, 40    // ultimate min-max dmg
+            11, 15,   // basic min-max dmg
+            24, 34,   // secondary min-max dmg
+            32, 52    // ultimate min-max dmg
         );
     }
 

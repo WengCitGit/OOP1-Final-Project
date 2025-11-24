@@ -6,7 +6,7 @@ public class LittleCaesars extends Character {
             "Little Caesars",
             165,   // max HP
             55,    // max Mana
-            5,     // mana regen
+            6,     // mana regen
 
             // SKILL NAMES
             "Hot-N-Ready Slam",
@@ -15,13 +15,13 @@ public class LittleCaesars extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            15,    // secondary mana cost
-            25,    // ultimate mana cost
+            14,    // secondary mana cost
+            28,    // ultimate mana cost
 
             // DAMAGE VALUES
-            13, 17,   // basic min-max dmg
-            19, 37,   // secondary min-max dmg
-            35, 45    // ultimate min-max dmg
+            12, 17,   // basic min-max dmg
+            20, 30,   // secondary min-max dmg
+            30, 50    // ultimate min-max dmg
         );
     }
 
