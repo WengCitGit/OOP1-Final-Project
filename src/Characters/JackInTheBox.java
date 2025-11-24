@@ -15,41 +15,29 @@ public class JackInTheBox extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            13,    // secondary mana cost
-            26,    // ultimate mana cost
+            15,    // secondary mana cost
+            31,    // ultimate mana cost
 
             // DAMAGE VALUES
-            8, 16,   // basic min-max dmg
-            15, 24,   // secondary min-max dmg
-            30, 50    // ultimate min-max dmg
+            8, 12,   // basic min-max dmg
+            14, 28,   // secondary min-max dmg
+            30, 40    // ultimate min-max dmg
         );
     }
 
 
     @Override
     public void basicAttack(Character target) {
-        performAttack(target,
-            getBasicMinDmg(), getBasicMaxDmg(),
-            getBasicManaCost(),
-            "Giant Headbutt Express"
-        );
+        performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), "Giant Headbutt Express");
     }
 
     @Override
     public void secondarySkill(Character target) {
-        performAttack(target,
-            getSecondaryMinDmg(), getSecondaryMaxDmg(),
-            getSecondaryManaCost(),
-            "Drive-Thru Confusion"
-        );
+        performAttack(target, getSecondaryMinDmg(), getSecondaryMaxDmg(), getSecondaryManaCost(), "Drive-Thru Confusion");
     }
 
     @Override
     public void ultimateSkill(Character target) {
-        performAttack(target,
-            getUltimateMinDmg(), getUltimateMaxDmg(),
-            getUltimateManaCost(),
-            "Titanic Jumbo Jack Combo"
-        );
+        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), "Titanic Jumbo Jack Combo");
     }
 }

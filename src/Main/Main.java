@@ -140,7 +140,7 @@ public class Main {
                 break;
             case 3:
                 System.out.println();
-                System.out.println("███████████████████████████████████████████████████████████████ STARTING ENDLESS MODE ███████████████████████████████████████████████████████████████ ");
+                System.out.println("███████████████████████████████████████████████████████████████ STARTING ENDLESS MODE ██████████████████████████████████████████████████████████████ ");
                 music.stop();
                 music.play("arcade_bgm.wav");
                 game.startEndless();

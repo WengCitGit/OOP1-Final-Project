@@ -20,41 +20,23 @@ public class BurgerKing extends Character {
 
             // DAMAGE VALUES
             8, 14,     // basic min-max dmg
-            12, 20,    // secondary min-max dmg
-            25, 55     // ultimate min-max dmg
+            16, 32,    // secondary min-max dmg
+            34, 44     // ultimate min-max dmg
         );
     }
 
     @Override
     public void basicAttack(Character target) {
-        performAttack(
-            target,
-            getBasicMinDmg(),
-            getBasicMaxDmg(),
-            getBasicManaCost(),
-            getBasicSkillName()
-        );
+        performAttack(target, getBasicMinDmg(), getBasicMaxDmg(), getBasicManaCost(), getBasicSkillName());
     }
 
     @Override
     public void secondarySkill(Character target) {
-        performAttack(
-            target,
-            getSecondaryMinDmg(),
-            getSecondaryMaxDmg(),
-            getSecondaryManaCost(),
-            getSecondarySkillName()
-        );
+        performAttack(target, getSecondaryMinDmg(), getSecondaryMaxDmg(),getSecondaryManaCost(),getSecondarySkillName());
     }
 
     @Override
     public void ultimateSkill(Character target) {
-        performAttack(
-            target,
-            getUltimateMinDmg(),
-            getUltimateMaxDmg(),
-            getUltimateManaCost(),
-            getUltimateSkillName()
-        );
+        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), getUltimateSkillName());
     }
 }

@@ -15,13 +15,13 @@ public class Jollibee extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            12,    // secondary mana cost
-            25,    // ultimate mana cost
+            13,    // secondary mana cost
+            27,    // ultimate mana cost
 
             // DAMAGE VALUES
-            10, 16,   // basic min-max dmg
-            14, 20,   // secondary min-max dmg
-            28, 55    // ultimate min-max dmg
+            13, 17,   // basic min-max dmg
+            19, 37,   // secondary min-max dmg
+            35, 45      // ultimate min-max dmg
         );
     }
 
