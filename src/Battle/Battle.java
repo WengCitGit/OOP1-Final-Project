@@ -108,8 +108,8 @@ public class Battle {
 
                 // Random mana regen every after turns for each player
                 if (turn % 2 == 0) {
-                    int p1Regen = player1.getRegenMana();
-                    int p2Regen = player2.getRegenMana();
+                    int p1Regen = 5 + random.nextInt(6); 
+                    int p2Regen = 5 + random.nextInt(6);
 
                     player1.addMana(p1Regen);
                     player2.addMana(p2Regen);
