@@ -142,9 +142,9 @@ public class CharacterSelector {
             "Dev Blast",    // secondarySkillName
             "Dev Ultimate", // ultimateSkillName
             5, 8, 20,        // mana costs
-            20, 35,         // basic min/max damage
-            28, 40,        // secondary min/max damage
-            38, 75        // ultimate min/max damage
+            10, 18,         // basic min/max damage
+            16, 33,        // secondary min/max damage
+            38, 55        // ultimate min/max damage
         ) {
             @Override
             public void basicAttack(Characters.Character target) {

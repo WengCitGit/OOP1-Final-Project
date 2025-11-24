@@ -113,7 +113,7 @@ import Characters.ChiefKhai;
             int streak = 0;
             while (true) {
                 System.out.println();
-                System.out.println("===== ENDLESS ROUND " + (streak + 1) + " =====");
+                
                 Characters.Character enemy = selector.chooseRandomCharacter();
 
                 System.out.println("Matchup: " + playerName + ": " + player.getName() + " VS " + enemy.getName());

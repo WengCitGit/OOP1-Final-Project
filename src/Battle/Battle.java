@@ -88,7 +88,7 @@ public class Battle {
 
                 decrementCooldowns(current);
 
-                System.out.println("\n                                                        ══════════ ROUND " + round + " - TURN " + turn + " ══════════");
+                System.out.println("\n                                                      ══════════ ROUND " + round + " - TURN " + turn + " ══════════");
                 System.out.println();
                 System.out.println(">>> " + getDisplayWithCharacterName(current) + "'s Turn! <<<");
                 showStats();
@@ -145,7 +145,7 @@ public class Battle {
     // Match winner
             System.out.println();
             System.out.println("                                                          ╒══════════════════════════════╕");
-            System.out.println(" ──────────────────────────────────────────────────────────           MATCH ENDED        ───────────────────────────────────────────────────────── ");
+            System.out.println(" ──────────────────────────────────────────────────────────          MATCH ENDED         ───────────────────────────────────────────────────────── ");
             System.out.println("                                                          ╘══════════════════════════════╛    ");
 
     if (player1Wins > player2Wins) {
