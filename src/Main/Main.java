@@ -44,7 +44,7 @@ public class Main {
 
             GameInfo gameInfo = new GameInfo();
 
-            // Handle info or exit
+            // Handle info or exit (moved to options 5 and 6)
             if (mode == 5) {
                 music.stop();
                 music.play("arcade_bgm.wav");

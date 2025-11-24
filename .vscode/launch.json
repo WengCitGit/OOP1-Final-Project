@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Simulator",
+            "request": "launch",
+            "mainClass": "Simulator.Simulator",
+            "projectName": "OOP1-Final-Project_2c55751b"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main.Main",
