@@ -10,7 +10,7 @@ public class CharacterSelector {
     private final String[] names = {
 
             "Jollibee - Crispy Joy Bringer ",
-            "McDonalds - Big Mac Basher",
+            "McDonald's - Big Mac Basher",
             "KFC - Colonel's Drumstick Duelist",
             "Burger King - Flame Griller",
             "Wendy's - Sassy Red Fighter",
@@ -45,7 +45,7 @@ public class CharacterSelector {
 
         System.out.println("==================================================");
         System.out.println("*  1. Jollibee - Crispy Joy Bringer              *");
-        System.out.println("*  2. McDo - Big Mac Basher                      *");
+        System.out.println("*  2. McDonald's - Big Mac Basher                      *");
         System.out.println("*  3. KFC - Colonel's Drumstick Duelist          *");
         System.out.println("*  4. Burger King - Flame Griller                *");
         System.out.println("*  5. Wendy's - Sassy Red Fighter                *");

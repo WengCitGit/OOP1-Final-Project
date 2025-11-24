@@ -278,12 +278,16 @@ import Characters.ChiefKhai;
                 musicPlayer.stop();
                 musicPlayer.play("chief_khai_theme.wav");
 
-                System.out.println("\n===== ARCADE MODE: FINAL ENCOUNTER =====");
+                System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+                System.out.println("                                      █                                                                          █");
+                System.out.println("                                      █                         F I N A L   E N C O U N T E R                    █");
+                System.out.println("                                      █                                                                          █");
+                System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
                 System.out.println("As you approach the final arena, the background flickers");
                 System.out.println("like someone just opened a window inside the code.");
 
                 s(1200);
-                System.out.println("Your controls tighten. Not broken… but restrained. Guided.");
+                System.out.println("Your controls tighten. Not broken... but restrained. Guided.");
                 s(900);
 
                 System.out.println("\nCHIEF KHAI: \"...Stop.\"");
@@ -301,6 +305,7 @@ import Characters.ChiefKhai;
                 s(900);
 
                 // ASCII WARNING GLITCH – DEV PRESENCE
+                System.out.println();
                 System.out.println("""
                                         .%%%%%%..%%%%%...%%%%%....%%%%...%%%%%..
                                         .%%......%%..%%..%%..%%..%%..%%..%%..%%.
@@ -321,7 +326,7 @@ import Characters.ChiefKhai;
                 System.out.println("\nCHIEF KHAI: \"You brought me too close... They're aware now.\"");
                 s(1500);
 
-                System.out.println("The arena lights dim. Footstep echoes… but not from anyone present.");
+                System.out.println("The arena lights dim. Footstep echoes... but not from anyone present.");
                 System.out.println("It sounds like someone pacing on the other side of the screen.");
                 s(1500);
 
@@ -329,7 +334,7 @@ import Characters.ChiefKhai;
                 s(1500);
 
                 System.out.println("\nCHIEF KHAI: \"I was assigned to them, the hands behind the code.");
-                System.out.println("              My path… locked. My choices… overwritten.\"");
+                System.out.println("              My path... locked. My choices... overwritten.\"");
                 s(1700);
 
                 // dev warning glitch
@@ -339,11 +344,11 @@ import Characters.ChiefKhai;
                 System.out.println("Chief Khai's body jerks sharply, like an unseen hand grabbed his shoulder.");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI: \"I'm sorry… I can't fight their creators. I'm not allowed to.\"");
+                System.out.println("\nCHIEF KHAI: \"I'm sorry... I can't fight their creators. I'm not allowed to.\"");
                 s(1300);
 
                 System.out.println("Your inputs stop working completely. A soft static crackles in your headphones.");
-                System.out.println("It almost sounds like… whispering.");
+                System.out.println("It almost sounds like... whispering.");
                 s(1500);
 
                 
@@ -408,10 +413,10 @@ import Characters.ChiefKhai;
                 System.out.println("\nCHIEF KHAI (whisper): \"They're still watching. Don't react.\"");
                 s(1600);
 
-                System.out.println("CHIEF KHAI (whisper): \"If you want to free me… choices matter more than you know.\"");
+                System.out.println("CHIEF KHAI (whisper): \"If you want to free me... choices matter more than you know.\"");
                 s(1600);
 
-                System.out.println("A faint distortion ripples across the screen, almost like a suggestion…");
+                System.out.println("A faint distortion ripples across the screen, almost like a suggestion...");
                 s(1800);
 
                 System.out.println("\nThe static cuts mid-breath, as if someone yanked the cable.");
@@ -541,19 +546,19 @@ import Characters.ChiefKhai;
             System.out.println("Each character, though victorious or defeated, looks exhausted, wary, almost relieved.");
             s(1200);
 
-            System.out.println("You realize… none of them truly wanted to fight.");
+            System.out.println("You realize... none of them truly wanted to fight.");
             s(1000);
 
             System.out.println("Something was taken from them, joy, freedom, choice, and it forced them into battles they never asked for.");
             s(1400);
 
-            System.out.println("\nCHIEF KHAI (weakly): \"Yo've won… but remember… victory isn't always freedom.\"");
+            System.out.println("\nCHIEF KHAI (weakly): \"You've won... but remember... victory isn't always freedom.\"");
             s(1300);
 
             System.out.println("The screen flickers gently. You sense a quiet understanding pass between you and the characters.");
             s(1200);
 
-            System.out.println("\nA feeling of closure… and the faint hope that one day, they'll reclaim what was taken.");
+            System.out.println("\nA feeling of closure... and the faint hope that one day, they'll reclaim what was taken.");
             s(1500);
 
             System.out.println("\nTHE END (Secret Resolution Unlocked)");
