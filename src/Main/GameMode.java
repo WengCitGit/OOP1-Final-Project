@@ -237,7 +237,13 @@ import Characters.ChiefKhai;
 
                 // ====== FIGHT NORMAL ENEMIES ======
                 for (String enemyName : enemyOrder) {
-                    System.out.println("\n===== ARCADE STAGE " + stage + " =====");
+                    System.out.println("\n");
+                    System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+                    System.out.println("                                      █                                                                          █");
+                    System.out.println("                                      █                       A R C A D E   S T A G E   " + String.format("%-2d", stage) + "                       █");
+                    System.out.println("                                      █                                                                          █");
+                    System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+                    System.out.println();
 
                     Characters.Character enemy = selector.getCharacterByName(enemyName.trim()); // declare once
                     if (enemy == null) {
@@ -416,7 +422,14 @@ import Characters.ChiefKhai;
 
 
             // ====== FIGHT CHIEF KHAI (if player did NOT choose him) ======
-            System.out.println("\n===== ARCADE STAGE " + stage + " - THE GUARD =====");
+            System.out.println("\n");
+            System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+            System.out.println("                                      █                                                                          █");
+            System.out.println("                                      █                  A R C A D E   S T A G E   " + String.format("%-2d", stage) + "  -  THE GUARD              █");
+            System.out.println("                                      █                                                                          █");
+            System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+            System.out.println();
+
             Characters.Character chief = selector.getCharacterByName("Chief Khai");
             System.out.println("Chief Khai blocks your way to the final boss!");
             // Label guards/bosses as generic enemies in Arcade mode
@@ -440,7 +453,15 @@ import Characters.ChiefKhai;
             String finalBossName = devBosses[r.nextInt(devBosses.length)];
             Characters.Character finalBoss = selector.getDevBoss(finalBossName);
 
-            System.out.println("\n============================================ FINAL BOSS: " + finalBossName + " ============================================");
+            System.out.println("\n");
+            System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+            System.out.println("                                      █                                                                          █");
+            System.out.println("                                      █                       F I N A L   B O S S   B A T T L E                  █");
+            System.out.println("                                      █                                                                          █");
+            System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
+            System.out.println("  >>> CHALLENGER: " + finalBossName + " <<<");
+            System.out.println();
+            
             // Final boss shown as an enemy label in arcade mode UI
             Battle finalBattle = new Battle(player, finalBoss, true, playerName, "Enemy");
             finalBattle.start();
