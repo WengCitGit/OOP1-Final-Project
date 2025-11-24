@@ -71,7 +71,7 @@ public class GameInfo {
             |    behind the screen?                                                                                  |
             |                                                                                                        |
             |    The battle has begun, but the real war is still unseen. Only the strongest, cleverest, and          |
-            |    most determined will survive the coming storm… and perhaps uncover the truth behind the             |
+            |    most determined will survive the coming storm... and perhaps uncover the truth behind the             |
             |    invisible hand controlling it all.                                                                  |
             |                                                                                                        |
             |                                                                                                        |
@@ -216,7 +216,7 @@ public class GameInfo {
                         Kentucky, serving fried chicken made from his secret recipe. When 
                         he saw abandoned children roaming the roads, he took them in, teaching 
                         them not only to cook, but to live with discipline, hard work, and love. 
-                        The diner became a home… and the home became an orphanage, protected 
+                        The diner became a home... and the home became an orphanage, protected 
                         under his care.
 
                         WHY (THE MOTIVATION):
@@ -410,7 +410,7 @@ public class GameInfo {
                         What people don't know is that Kuya Guard is deep in debt. Someone offered him 
                         money he couldn't refuse. In exchange, he follows their orders, keeping the 
                         players in line, blocking their joy, and maintaining control. He tells himself 
-                        it's only for survival… but behind every whistle, there is guilt. And the players 
+                        it's only for survival... but behind every whistle, there is guilt. And the players 
                         must never discover who he truly serves, at least, not yet.
 
 

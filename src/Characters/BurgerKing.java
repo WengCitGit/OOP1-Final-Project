@@ -4,7 +4,7 @@ public class BurgerKing extends Character {
     public BurgerKing() {
         super(
             "Burger King",
-            165,   // max HP
+            160,   // max HP
             60,    // max Mana
             6,     // mana regen
 
@@ -19,9 +19,9 @@ public class BurgerKing extends Character {
             30,    // ultimate mana cost
 
             // DAMAGE VALUES
-            8, 12,     // basic min-max dmg
-            12, 18,    // secondary min-max dmg
-            25, 40     // ultimate min-max dmg
+            8, 14,     // basic min-max dmg
+            12, 20,    // secondary min-max dmg
+            25, 55     // ultimate min-max dmg
         );
     }
 

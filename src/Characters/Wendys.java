@@ -5,7 +5,7 @@ public class Wendys extends Character {
         super(
             "Wendys",
             165,   // max HP
-            60,    // max Mana
+            55,    // max Mana
             8,     // mana regen
 
             // SKILL NAMES

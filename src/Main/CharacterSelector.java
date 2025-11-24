@@ -10,7 +10,7 @@ public class CharacterSelector {
     private final String[] names = {
 
             "Jollibee - Crispy Joy Bringer ",
-            "McDo - Big Mac Basher",
+            "McDonalds - Big Mac Basher",
             "KFC - Colonel's Drumstick Duelist",
             "Burger King - Flame Griller",
             "Wendy's - Sassy Red Fighter",

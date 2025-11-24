@@ -4,8 +4,8 @@ public class ChiefKhai extends Character {
     public ChiefKhai() {
         super(
             "Chief Khai",
-            180,   // max HP
-            70,    // max Mana
+            170,   // max HP
+            55,    // max Mana
             7,     // mana regen
 
             // SKILL NAMES
@@ -19,7 +19,7 @@ public class ChiefKhai extends Character {
             32,    // ultimate mana cost
 
             // DAMAGE VALUES
-            12, 16,   // basic min-max dmg
+            12, 14,   // basic min-max dmg
             18, 28,   // secondary min-max dmg
             35, 55    // ultimate min-max dmg
         );
@@ -45,9 +45,9 @@ public class ChiefKhai extends Character {
     public ChiefKhai(boolean arcadeOP) {
         super(
             "Chief Khai",
-            500,      // Max HP (insanely high)
-            160,       // Max Mana
-            50,        // Mana Regen
+            180,      // Max HP (insanely high)
+            85,       // Max Mana
+            12,        // Mana Regen
             "OP Strike",
             "OP Kick",
             "OP Ultimate",
@@ -58,9 +58,9 @@ public class ChiefKhai extends Character {
             45,   // Ultimate
 
             // Damage values
-            21, 32,   // Basic min/max dmg
-            30, 51,   // Secondary min/max dmg
-            41, 100   // Ultimate min/max dmg
+            10, 23,   // Basic min/max dmg
+            26, 32,   // Secondary min/max dmg
+            27, 58   // Ultimate min/max dmg
         );
     }
 
