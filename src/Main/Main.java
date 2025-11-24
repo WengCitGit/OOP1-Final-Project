@@ -65,6 +65,7 @@ public class Main {
     }
 
     private static void displayTitle() {
+        System.out.println();
         System.out.println("██████████████████████████████████████████████████████████████████████████████████████████╗");
         System.out.println("██╔═════════════════════════════════════════════════════════════════════════════════════██║");
         System.out.println("██║                                                                                     ██║");
@@ -128,14 +129,17 @@ public class Main {
 
         switch (mode) {
             case 1:
+                System.out.println();
                 System.out.println("████████████████████████████████████████████████████████████████ STARTING PVP MODE ████████████████████████████████████████████████████████████████ ");
                 game.startPVP();
                 break;
             case 2:
+                System.out.println();
                 System.out.println("████████████████████████████████████████████████████████████████ STARTING PVC MODE ████████████████████████████████████████████████████████████████ ");
                 game.startPVC();
                 break;
             case 3:
+                System.out.println();
                 System.out.println("███████████████████████████████████████████████████████████████ STARTING ENDLESS MODE ███████████████████████████████████████████████████████████████ ");
                 music.stop();
                 music.play("arcade_bgm.wav");
