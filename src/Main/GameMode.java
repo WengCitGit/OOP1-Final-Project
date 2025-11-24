@@ -133,9 +133,39 @@ import Characters.ChiefKhai;
                     System.out.println("\nYou defeated " + enemy.getName() + "!");
                     System.out.println("Current streak: " + streak);
                     System.out.println("Your HP: " + player.getHealth() + " / " + player.getMaxHealth());
-                    System.out.println("\nPress ENTER to face the next challenger...");
-                    // wait for ENTER (simple console pause)
-                    try { System.in.read(); } catch (Exception e) { /* ignore */ }
+
+                    // Prompt: ENTER to continue, or 's' to surrender
+                    while (true) {
+                        System.out.print("\nPress ENTER to face the next challenger, or type 's' then ENTER to surrender: ");
+                        String next = scan.nextLine();
+
+                        if (next == null || next.trim().isEmpty()) {
+                            // continue to next challenger
+                            break; // break prompt loop and continue outer while
+                        }
+
+                        if (next.trim().equalsIgnoreCase("s")) {
+                            // Confirm surrender
+                            while (true) {
+                                System.out.print("Are you sure you want to surrender? (y/n): ");
+                                String confirm = scan.nextLine().trim();
+                                if (confirm.equalsIgnoreCase("y")) {
+                                    System.out.println("\nYou surrendered!");
+                                    System.out.println("FINAL STREAK: " + streak + " enemies defeated.");
+                                    return;
+                                } else if (confirm.equalsIgnoreCase("n")) {
+                                    // Don't surrender, go back to the prompt to continue or surrender
+                                    break;
+                                } else {
+                                    System.out.println("Please answer 'y' or 'n'.");
+                                }
+                            }
+                        } else {
+                            // any other input treated as continue
+                            break;
+                        }
+                    }
+                    // proceed to next challenger
                     continue;
                 } else {
                     // Player lost
