@@ -55,40 +55,48 @@ public class Simulator {
             }
         }
 
-        // Build result objects
-        List<Result> results = new ArrayList<>();
+        // Build two separate result lists:
+        //  - bossResults: win rate vs dev bosses (Arcade mode)
+        //  - oppResults: win rate vs random opponents (PVC/PVP/Endless)
+        List<Result> bossResults = new ArrayList<>();
+        List<Result> oppResults = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String name = baseList[i].getName();
-            double winRate = (wins[i] * 100.0) / SIM_ROUNDS;
-            results.add(new Result(name, winRate, wins[i], bossWins[i]));
+            double oppWinRate = (wins[i] * 100.0) / SIM_ROUNDS;
+            double bossWinRate = (bossWins[i] * 100.0) / SIM_ROUNDS;
+            // For bossResults, store boss win rate and bossWins in the wins field for display convenience
+            bossResults.add(new Result(name, bossWinRate, bossWins[i], wins[i]));
+            // For oppResults, store opponent win rate and wins
+            oppResults.add(new Result(name, oppWinRate, wins[i], bossWins[i]));
         }
 
-        // Sort leaderboard by winRate desc
-        results.sort((a, b) -> Double.compare(b.winRate, a.winRate));
+        // Sort each leaderboard by their respective winRate desc
+        bossResults.sort((a, b) -> Double.compare(b.winRate, a.winRate));
+        oppResults.sort((a, b) -> Double.compare(b.winRate, a.winRate));
 
 
         // Print leaderboard (simple space-separated columns)
-        System.out.println("\n=============== SIMULATOR LEADERBOARD (Win Rate) ================\n");
+        System.out.println("\n=============== SIMULATOR LEADERBOARD (Win Rate vs Boss) ================\n");
 
         // Align stats into their own columns using minimal spaces based on the longest name
         int maxNameLen = "Character".length();
-        for (Result r : results) {
-            if (r.name != null && r.name.length() > maxNameLen) maxNameLen = r.name.length();
+        for (Characters.Character c : baseList) {
+            String nm = c.getName();
+            if (nm != null && nm.length() > maxNameLen) maxNameLen = nm.length();
         }
 
-        // First leaderboard: includes boss wins column
-        System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%   Wins   BossWins");
+        // First leaderboard: Arcade / Boss results (show boss win rate and boss wins)
+        System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%   BossWins");
 
         int rank = 1;
-        for (Result r : results) {
-            double v = Math.round(r.winRate * 10.0) / 10.0; // one decimal
+        for (Result r : bossResults) {
+            double v = Math.round(r.winRate * 10.0) / 10.0; // one decimal (boss win rate)
             String winStr = v + "%";
-            String winsStr = r.wins + "/" + SIM_ROUNDS;
-            String bossStr = r.bossWins + "/" + SIM_ROUNDS;
+            String bossStr = r.wins + "/" + SIM_ROUNDS; // r.wins holds bossWins for bossResults
 
             int gap = maxNameLen - (r.name == null ? 0 : r.name.length()) + 1;
             String pad = spaces(gap);
-            String row = rank + " " + r.name + pad + winStr + "   " + winsStr + "   " + bossStr;
+            String row = rank + " " + r.name + pad + winStr + "   " + bossStr;
             System.out.println(row);
             rank++;
         }
@@ -99,10 +107,10 @@ public class Simulator {
         System.out.println("# Character" + spaces(maxNameLen - "Character".length() + 1) + "Win%   Wins");
 
         rank = 1;
-        for (Result r : results) {
-            double v = Math.round(r.winRate * 10.0) / 10.0;
+        for (Result r : oppResults) {
+            double v = Math.round(r.winRate * 10.0) / 10.0; // opponent win rate
             String winStr = v + "%";
-            String winsStr = r.wins + "/" + SIM_ROUNDS;
+            String winsStr = r.wins + "/" + SIM_ROUNDS; // r.wins holds opponent wins for oppResults
 
             int gap = maxNameLen - (r.name == null ? 0 : r.name.length()) + 1;
             String pad = spaces(gap);
