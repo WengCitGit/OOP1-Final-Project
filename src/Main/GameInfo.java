@@ -47,7 +47,7 @@ public class GameInfo {
             |    In a world where fast food mascots are more than mere icons, an invisible storm brews.              |
             |    Rivalries spark, alliances form, and battles erupt across cities, kitchens, and                     |
             |    abandoned amusement parks. Once symbols of joy and comfort, the mascots are now drawn               |
-            |    into a mysterious competition—where the stakes are higher than fries, chicken, or pizza.            |
+            |    into a mysterious competition, where the stakes are higher than fries, chicken, or pizza.           |
             |                                                                                                        |
             |    All the mascots share one truth: they never wanted to fight. They do not enjoy combat, yet          |
             |    each was forced into this chaos because something precious was taken from them. Never did           |
@@ -55,8 +55,8 @@ public class GameInfo {
             |    in a game with unseen rules.                                                                        |
             |                                                                                                        |       
             |    The orphanage, once a sanctuary of warmth and discipline under Colonel KFC and his wife,            |
-            |    has become a central beacon for these heroes. Each mascot has a connection—whether as a             |
-            |    former child, caretaker, or wandering ally—tying them together in a fragile network of              |
+            |    has become a central beacon for these heroes. Each mascot has a connection, whether as a            |
+            |    former child, caretaker, or wandering ally, tying them together in a fragile network of             |
             |    trust. Yet even as they fight, something unseen watches from the shadows, twisting events           |
             |    and bending the rules.                                                                              |
             |                                                                                                        |
@@ -70,7 +70,7 @@ public class GameInfo {
             |    doubt: is the rival across from them the true enemy, or something far more sinister hiding          |
             |    behind the screen?                                                                                  |
             |                                                                                                        |
-            |    The battle has begun—but the real war is still unseen. Only the strongest, cleverest, and           |
+            |    The battle has begun, but the real war is still unseen. Only the strongest, cleverest, and          |
             |    most determined will survive the coming storm… and perhaps uncover the truth behind the             |
             |    invisible hand controlling it all.                                                                  |
             |                                                                                                        |
@@ -120,7 +120,7 @@ public class GameInfo {
                         The cheerful little bee who discovered the true power of joy. 
                         After being adopted, he realized that a smile could be stronger 
                         than any sword. With a heart full of happiness, he proudly chants, 
-                        “Bida ang saya! ” Joy is the star, and he is here to make sure it 
+                        "Bida ang saya!" Joy is the star, and he is here to make sure it 
                         shines everywhere.
 
 
@@ -155,7 +155,7 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        The Clown with a big heart—always smiling, even when it hurts. One 
+                        The Clown with a big heart, always smiling, even when it hurts. One 
                         half of the Clown Brothers, he learned to laugh through loneliness, 
                         turning tears into tricks and sorrow into smiles. Beneath his painted 
                         grin lies a heart that beats for family, with his brother by his side, 
@@ -167,7 +167,7 @@ public class GameInfo {
 
                         After Jollibee was adopted from the orphanage, McDonalds and his brother 
                         stayed behind. But instead of letting despair consume them, they dreamed 
-                        bigger. Together, they built a small circus—bright lights, painted faces, 
+                        bigger. Together, they built a small circus, bright lights, painted faces, 
                         and the sound of children's laughter filling every corner. Their circus 
                         became a place where broken hearts could heal and forgotten souls could 
                         smile again. Side by side, the Clown Brothers spread happiness across 
@@ -176,12 +176,12 @@ public class GameInfo {
 
                         WHY (THE MOTIVATION):
 
-                        His brother vanished—kidnapped by shadowy forces that feed on greed and 
+                        His brother vanished,kidnapped by shadowy forces that feed on greed and 
                         sorrow. Now, McDonalds must enter the Game, a twisted challenge where 
                         smiles are tested and hearts are broken. To win is to bring his brother 
                         back; to lose is to let joy disappear forever. Armed with golden fries, 
                         hope in his heart, and courage beneath the greasepaint, McDonalds fights 
-                        not just for victory—but for family, and for the belief that even in 
+                        not just for victory, but for family, and for the belief that even in 
                         darkness, a smile can save the world.
 
 
@@ -197,13 +197,13 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        Harland “Colonel” Sanders became more than a man—he became a father 
+                        Harland "Colonel" Sanders became more than a man, he became a father 
                         figure. Having struggled through hardship himself, he saw the value of 
                         discipline, patience, and care. Strict but loving, he raised a family 
                         of lost children in his roadside restaurant, turning fried chicken into 
                         lessons of perseverance and life skills. His wife, Claudia Price, was 
                         the heart of the home, nurturing the children, while he was the shield, 
-                        defending them from the storms of life. Honored as “Colonel of Kentucky” 
+                        defending them from the storms of life. Honored as "Colonel of Kentucky"3 
                         in 1935 for his contributions to the state, Sanders carried that same 
                         protective spirit into every kitchen and battlefield.
 
@@ -214,7 +214,7 @@ public class GameInfo {
                         was just a simple man with an iron skillet and a stubborn dream.
                         During the Great Depression, he ran a small roadside restaurant in 
                         Kentucky, serving fried chicken made from his secret recipe. When 
-                        he saw abandoned children roaming the roads, he took them in—teaching 
+                        he saw abandoned children roaming the roads, he took them in, teaching 
                         them not only to cook, but to live with discipline, hard work, and love. 
                         The diner became a home… and the home became an orphanage, protected 
                         under his care.
@@ -223,7 +223,7 @@ public class GameInfo {
 
                         Now, a new storm brews. Rival mascots, greedy corporations, and twisted 
                         chefs threaten to consume the world in chaos and gluttony. The Colonel 
-                        enters the Fast Feuds not for glory—but for his family. He fights to 
+                        enters the Fast Feuds not for glory, but for his family. He fights to 
                         protect his wife, who now stands as the orphanage's beating heart, and 
                         to test his children, ensuring they are strong enough to face whatever 
                         darkness comes next.            
@@ -299,7 +299,7 @@ public class GameInfo {
                         she recently discovered that the one responsible for her father's death is somewhere 
                         in this chaotic game world. She doesn't yet know who, only that the answer lies within 
                         the arena of the game. Her journey is fueled by the desire for justice and closure, 
-                        tempered by the love she received from KFC's wife—a reminder of what she is fighting 
+                        tempered by the love she received from KFC's wife, a reminder of what she is fighting 
                         to protect, and why she cannot afford to lose.            
 
 
@@ -314,10 +314,10 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        The quiet kid from the orphanage—the one who spoke little but dreamed 
+                        The quiet kid from the orphanage, the one who spoke little but dreamed 
                         loud. Behind his calm gaze was a mind full of wild ideas, recipes, and 
                         tricks waiting to burst free. While others chased laughter, Jack chased 
-                        invention—always tinkering, always planning, always thinking outside 
+                        invention, always tinkering, always planning, always thinking outside 
                         the box.
 
 
@@ -326,7 +326,7 @@ public class GameInfo {
                         When the McDo Brothers left the orphanage to bring laughter to the world, 
                         Jack followed. He wasn't born for the spotlight, but his hands built the 
                         magic that made the crowd cheer. But as the circus grew brighter, Jack's 
-                        ambitions grew sharper. He eventually left to start something of his own—a 
+                        ambitions grew sharper. He eventually left to start something of his own, a 
                         breakfast franchise where every meal was a masterpiece, every morning a new 
                         beginning. For a while, it was perfect. The world loved Jack's creations. 
                         He had finally stepped out of the box.
@@ -334,12 +334,12 @@ public class GameInfo {
 
                         WHY (THE MOTIVATION):
 
-                        Everything changed when a contamination scandal struck. The burgers—his 
-                        pride—turned poisonous, and all fingers pointed to him. Branded a villain, 
+                        Everything changed when a contamination scandal struck. The burgers, his 
+                        pride, turned poisonous, and all fingers pointed to him. Branded a villain, 
                         Jack vanished into the shadows, clutching the only clue: the burger wasn't 
                         his failure, but someone's sabotage. Now, he's on a mission to find the 
                         antidote, clear his name, and uncover the truth behind the corruption. 
-                        Beneath the mask of calm lies a storm—a man fighting not just for redemption, 
+                        Beneath the mask of calm lies a storm, a man fighting not just for redemption, 
                         but for the trust he lost and the taste of justice he deserves.
             
                         
@@ -374,7 +374,7 @@ public class GameInfo {
                         WHY (THE MOTIVATION):
                         During his charitable travels, he uncovered the dark plans of the mysterious forces 
                         controlling the game world. Attempting to intervene, his memory was tampered with, 
-                        making him forget his true purpose. Now, he fights alongside—or against—anyone, 
+                        making him forget his true purpose. Now, he fights alongside or against anyone, 
                         driven by fragmented visions and flashes of the truth. Every encounter is a puzzle, 
                         and every ally could be an enemy in disguise.
 
@@ -399,7 +399,7 @@ public class GameInfo {
 
                         WHERE (THE ORIGIN):
 
-                        He wandered from chain to chain—McDo, KFC, Jollibee, Wendy's, always the 
+                        He wandered from chain to chain, McDo, KFC, Jollibee, Wendy's, always the 
                         same uniform, always the same whistle. Nobody questioned why every branch 
                         had the same face guarding its doors. He was everywhere, yet belonged nowhere, 
                         like a shadow hired to keep order but also to keep secrets.
@@ -411,7 +411,7 @@ public class GameInfo {
                         money he couldn't refuse. In exchange, he follows their orders, keeping the 
                         players in line, blocking their joy, and maintaining control. He tells himself 
                         it's only for survival… but behind every whistle, there is guilt. And the players 
-                        must never discover who he truly serves—at least, not yet.
+                        must never discover who he truly serves, at least, not yet.
 
 
                         """);

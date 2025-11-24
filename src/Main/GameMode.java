@@ -234,8 +234,8 @@ import Characters.ChiefKhai;
                 musicPlayer.play("chief_khai_theme.wav");
 
                 System.out.println("\n===== ARCADE MODE: FINAL ENCOUNTER =====");
-                System.out.println("As you approach the final arena, the background flickers—");
-                System.out.println("—like someone just opened a window inside the code.");
+                System.out.println("As you approach the final arena, the background flickers");
+                System.out.println("like someone just opened a window inside the code.");
 
                 s(1200);
                 System.out.println("Your controls tighten. Not broken… but restrained. Guided.");
@@ -266,11 +266,11 @@ import Characters.ChiefKhai;
                                         """);
                 s(1200);
 
-                System.out.println("The symbol flashes aggressively before vanishing—");
+                System.out.println("The symbol flashes aggressively before vanishing");
                 System.out.println("like the system tried to warn you, or warn HIM.");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI slowly turns—not toward the boss, but toward YOU." );
+                System.out.println("\nCHIEF KHAI slowly turns, not toward the boss, but toward YOU." );
                 s(1600);
 
                 System.out.println("\nCHIEF KHAI: \"You brought me too close... They're aware now.\"");
@@ -283,7 +283,7 @@ import Characters.ChiefKhai;
                 System.out.println("\nCHIEF KHAI: \"They're watching us. Every frame. Every move.\"");
                 s(1500);
 
-                System.out.println("\nCHIEF KHAI: \"I was assigned to them—the hands behind the code.");
+                System.out.println("\nCHIEF KHAI: \"I was assigned to them, the hands behind the code.");
                 System.out.println("              My path… locked. My choices… overwritten.\"");
                 s(1700);
 
@@ -482,7 +482,7 @@ import Characters.ChiefKhai;
             System.out.println("You realize… none of them truly wanted to fight.");
             s(1000);
 
-            System.out.println("Something was taken from them—joy, freedom, choice—and it forced them into battles they never asked for.");
+            System.out.println("Something was taken from them, joy, freedom, choice, and it forced them into battles they never asked for.");
             s(1400);
 
             System.out.println("\nCHIEF KHAI (weakly): \"Yo've won… but remember… victory isn't always freedom.\"");
