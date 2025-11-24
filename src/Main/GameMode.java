@@ -240,7 +240,8 @@ import Characters.ChiefKhai;
                     Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
                     System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
 
-                    Battle battle = new Battle(player, enemy, true, playerName, enemy.getName());
+                    // Use a generic enemy label so in-arcade UI shows "Enemy (Character)"
+                    Battle battle = new Battle(player, enemy, true, playerName, "Enemy");
                     battle.start();
 
                     if (!player.isAlive()) {
@@ -254,7 +255,9 @@ import Characters.ChiefKhai;
                     player.restoreHP();
                     System.out.println("\nYou defeated " + enemy.getName() + "!");
                     System.out.println("HP restored. Press ENTER to continue...");
-                    try { System.in.read(); } catch (Exception e) {}
+                    // Use the shared Scanner to consume the newline cleanly so Main.askPlayAgain()
+                    // doesn't see leftover input and prompt twice.
+                    scan.nextLine();
                 }
 
             // ====== FINAL TWIST: Player is Chief Khai ======
@@ -410,7 +413,8 @@ import Characters.ChiefKhai;
             System.out.println("\n===== ARCADE STAGE " + stage + " - THE GUARD =====");
             Characters.Character chief = selector.getCharacterByName("Chief Khai");
             System.out.println("Chief Khai blocks your way to the final boss!");
-            Battle vsKhai = new Battle(player, chief, true, playerName, "Chief Khai");
+            // Label guards/bosses as generic enemies in Arcade mode
+            Battle vsKhai = new Battle(player, chief, true, playerName, "Enemy");
             vsKhai.start();
 
             if (!player.isAlive()) {
@@ -431,7 +435,8 @@ import Characters.ChiefKhai;
             Characters.Character finalBoss = selector.getDevBoss(finalBossName);
 
             System.out.println("\n============================================ FINAL BOSS: " + finalBossName + " ============================================");
-            Battle finalBattle = new Battle(player, finalBoss, true, playerName, finalBossName);
+            // Final boss shown as an enemy label in arcade mode UI
+            Battle finalBattle = new Battle(player, finalBoss, true, playerName, "Enemy");
             finalBattle.start();
 
             if (!player.isAlive()) {
