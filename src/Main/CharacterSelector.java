@@ -135,7 +135,7 @@ public class CharacterSelector {
     public Characters.Character getDevBoss(String name) {
         return new Characters.Character(
             name,           // name
-            450,           // maxHp
+            435,           // maxHp
             100,            // maxMana
             8,             // regenMana
             "Dev Strike",   // basicSkillName
