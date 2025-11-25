@@ -15,13 +15,13 @@ public class JackInTheBox extends Character {
 
             // MANA COSTS
             0,     // basic mana cost
-            13,    // secondary mana cost
-            28,    // ultimate mana cost
+            15,    // secondary mana cost
+            30,    // ultimate mana cost
 
             // DAMAGE VALUES
-            11, 15,   // basic min-max dmg
-            24, 34,   // secondary min-max dmg
-            32, 52    // ultimate min-max dmg
+            11, 16,   // basic min-max dmg
+            20, 30,   // secondary min-max dmg
+            34, 52    // ultimate min-max dmg
         );
     }
 

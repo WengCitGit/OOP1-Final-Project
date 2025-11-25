@@ -114,7 +114,10 @@ import Characters.ChiefKhai;
             while (true) {
                 System.out.println();
                 
-                Characters.Character enemy = selector.chooseRandomCharacter();
+                Characters.Character enemy;
+                do {
+                    enemy = selector.chooseRandomCharacter();
+                } while (enemy.getName().equals(player.getName()));
 
                 System.out.println("Matchup: " + playerName + ": " + player.getName() + " VS " + enemy.getName());
                 System.out.println("Get ready...");
@@ -245,12 +248,15 @@ import Characters.ChiefKhai;
                     System.out.println("                                      ████████████████████████████████████████████████████████████████████████████");
                     System.out.println();
 
-                    Characters.Character enemy = selector.getCharacterByName(enemyName.trim()); // declare once
-                    if (enemy == null) {
-                        System.out.println("ERROR: Enemy " + enemyName + " not found! Skipping stage.");
-                        stage++;
-                        continue; // skip this enemy
-                    }   
+                    Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
+
+                    if (enemy == null || enemy.getName().equals(player.getName())) {
+                        // fallback: get ANY random enemy except player
+                        do {
+                            enemy = selector.chooseRandomCharacter();
+                        } while (enemy.getName().equals(player.getName()));
+                    }
+
 
                     System.out.println("Matchup: " + getDisplayWithCharacterName(player, playerName) 
                                     + " VS " + getDisplayWithCharacterName(enemy, "Enemy"));
