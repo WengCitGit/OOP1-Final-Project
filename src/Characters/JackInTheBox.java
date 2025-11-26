@@ -20,8 +20,8 @@ public class JackInTheBox extends Character {
 
             // DAMAGE VALUES
             11, 16,   // basic min-max dmg
-            20, 30,   // secondary min-max dmg
-            34, 52    // ultimate min-max dmg
+            19, 29,   // secondary min-max dmg
+            32, 50    // ultimate min-max dmg
         );
     }
 

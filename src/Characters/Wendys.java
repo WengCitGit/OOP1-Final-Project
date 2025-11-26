@@ -20,7 +20,7 @@ public class Wendys extends Character {
 
             // DAMAGE VALUES
             12, 17,   // basic min-max dmg
-            21, 31,   // secondary min-max dmg
+            18, 28,   // secondary min-max dmg
             30, 48    // ultimate min-max dmg
         );
     }

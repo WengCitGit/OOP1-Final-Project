@@ -21,7 +21,7 @@ public class LittleCaesars extends Character {
             // DAMAGE VALUES
             12, 17,   // basic min-max dmg
             20, 30,   // secondary min-max dmg
-            30, 48    // ultimate min-max dmg
+            34, 42    // ultimate min-max dmg
         );
     }
 

@@ -20,7 +20,7 @@
 
                 // DAMAGE VALUES
                 12, 17,   // basic min-max dmg
-                20, 30,   // secondary min-max dmg
+                18, 28,   // secondary min-max dmg
                 32, 50      // ultimate min-max dmg
             );
         }
