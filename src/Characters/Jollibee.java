@@ -15,7 +15,7 @@
 
                 // MANA COSTS
                 0,     // basic mana cost
-                13,    // secondary mana cost
+                15,    // secondary mana cost
                 30,    // ultimate mana cost
 
                 // DAMAGE VALUES
