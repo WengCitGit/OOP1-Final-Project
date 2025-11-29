@@ -289,8 +289,15 @@ public class GameInfo {
 
 
                         WHERE (THE ORIGIN):
-
                         
+                        After her father's death, the world cast Wendy aside, but the Colonel's wife, Claudia 
+                        Price, took her in from the streets and carried her into the warmth of their bustling 
+                        orphanage - a place where the scent of frying chicken mixed with the laughter of children 
+                        who had nowhere else to go. Though she was the only girl among them, Wendy found comfort 
+                        in the rhythm of the kitchen and the quiet strength of the family she never expected to 
+                        have. Under the watchful care of Claudia and the disciplined guidance of the Colonel, 
+                        the orphanage became more than shelter - it became the first place since her father's 
+                        passing where she felt safe enough to hope again.
 
 
                         WHY (THE MOTIVATION):
@@ -390,7 +397,7 @@ public class GameInfo {
 
                         WHO (THE HERO): 
 
-                        Kuya Guard, the ever-watchful protector at the entrance of every fast 
+                        Chief Khai, the ever-watchful protector at the entrance of every fast 
                         food chain. To the world, he looks like a simple security guard with 
                         a whistle and flashlight. But in truth, he is no ordinary man. He was 
                         placed there by unseen hands, disguised to watch, control, and report 
@@ -407,7 +414,7 @@ public class GameInfo {
 
                         WHY (THE MOTIVATION):
 
-                        What people don't know is that Kuya Guard is deep in debt. Someone offered him 
+                        What people don't know is that Chief Khai is deep in debt. Someone offered him 
                         money he couldn't refuse. In exchange, he follows their orders, keeping the 
                         players in line, blocking their joy, and maintaining control. He tells himself 
                         it's only for survival... but behind every whistle, there is guilt. And the players 

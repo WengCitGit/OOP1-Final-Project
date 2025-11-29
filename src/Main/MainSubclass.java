@@ -1,6 +1,7 @@
 package Main;
 
 import java.util.Scanner;
+import Modes.*;
 
 public class MainSubclass {
     private final Scanner scan;
@@ -124,32 +125,36 @@ public class MainSubclass {
     }
 
     private void startGameMode(int mode) {
-        GameMode game = new GameMode(this.music);
-
+        //GameMode game = new GameMode(this.music);
+        Mode selectedMode;
         switch (mode) {
             case 1:
                 System.out.println();
                 System.out.println("████████████████████████████████████████████████████████████████ STARTING PVP MODE ████████████████████████████████████████████████████████████████ ");
-                game.startPVP();
+                selectedMode = new PVPMode(this.music);
+                selectedMode.start();
                 break;
             case 2:
                 System.out.println();
                 System.out.println("████████████████████████████████████████████████████████████████ STARTING PVC MODE ████████████████████████████████████████████████████████████████ ");
-                game.startPVC();
+                selectedMode = new PVCMode(this.music);
+                selectedMode.start();
                 break;
             case 3:
                 System.out.println();
                 System.out.println("███████████████████████████████████████████████████████████████ STARTING ENDLESS MODE ██████████████████████████████████████████████████████████████ ");
                 music.stop();
                 music.play("arcade_bgm.wav");
-                game.startEndless();
+                selectedMode = new EndlessMode(this.music);
+                selectedMode.start();
                 music.stop();
                 break;
             case 4:
                 System.out.println("███████████████████████████████████████████████████████████████ STARTING ARCADE MODE ███████████████████████████████████████████████████████████████ ");
                 music.stop();
                 music.play("arcade_bgm.wav");
-                game.startArcadeMode();
+                selectedMode = new ArcadeMode(this.music);
+                selectedMode.start();
                 break;
             default:
                 System.out.println("Invalid mode selected!");
