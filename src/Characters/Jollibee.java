@@ -9,9 +9,9 @@
                 6,     // mana regen
 
                 // SKILL NAMES
-                "Juicylicious Crispy Chicken Joy Slam",
+                "Juicylicious Slam",
                 "Langhap Sarap Aura",
-                "Super Meal Combo Domination",
+                "Super Meal Domination",
 
                 // MANA COSTS
                 0,     // basic mana cost

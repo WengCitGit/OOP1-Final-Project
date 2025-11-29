@@ -10,7 +10,7 @@ public class Player {
 
     public Player(String name, Character character, boolean isHuman) {
         this.name = name;
-        this.character = character;
+        this.character = character; 
         this.isHuman = isHuman;
     }
 

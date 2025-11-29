@@ -10,7 +10,7 @@ public class KFC extends Character {
 
             // SKILL NAMES
             "DrumStick Smash",
-            "Shooting Flaming Hotshot",
+            "Hotshot Burst",
             "Secret Sauce Overload",
 
             // MANA COSTS

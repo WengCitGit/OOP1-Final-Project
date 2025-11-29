@@ -9,9 +9,9 @@ public class McDonalds extends Character {
             7,     // mana regen
 
             // SKILL NAMES
-            "Frosty McFlurry Blast",
-            "Crispy BFF Fries Fury",
-            "Colossal BIG MAC Slam",
+            "McFlurry Blast",
+            "BFF Fries Fury",
+            "BIG MAC Slam",
 
             // MANA COSTS
             0,     // basic mana cost

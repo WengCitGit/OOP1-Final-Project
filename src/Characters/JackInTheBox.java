@@ -9,9 +9,9 @@ public class JackInTheBox extends Character {
             7,     // mana regen
 
             // SKILL NAMES
-            "Giant Headbutt Express",
+            "Headbutt Express",
             "Drive-Thru Confusion",
-            "Titanic Jumbo Jack Combo",
+            "Jumbo Jack Combo",
 
             // MANA COSTS
             0,     // basic mana cost

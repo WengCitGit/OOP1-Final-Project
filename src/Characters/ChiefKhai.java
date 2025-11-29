@@ -11,7 +11,7 @@ public class ChiefKhai extends Character {
             // SKILL NAMES
             "Batuta Bonk",
             "Pakibukas ng Bag",
-            "Mega Whistle Shockwave",
+            "Whistle Shockwave",
 
             // MANA COSTS
             0,     // basic mana cost
@@ -38,7 +38,7 @@ public class ChiefKhai extends Character {
 
     @Override
     public void ultimateSkill(Character target) {
-        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), "Mega Whistle Shockwave");
+        performAttack(target, getUltimateMinDmg(), getUltimateMaxDmg(), getUltimateManaCost(), "Whistle Shockwave");
     }
 
 

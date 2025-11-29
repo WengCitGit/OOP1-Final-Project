@@ -11,7 +11,7 @@ public class LittleCaesars extends Character {
             // SKILL NAMES
             "Hot-N-Ready Slam",
             "Crazy Bread Barrage",
-            "Deep! Deep! Dish Catastrophe",
+            "Deep! Dish Catastrophe",
 
             // MANA COSTS
             0,     // basic mana cost
