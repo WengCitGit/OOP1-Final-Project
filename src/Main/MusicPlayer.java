@@ -3,47 +3,52 @@ package Main;
 import javax.sound.sampled.*;
 import java.io.File;
 
-public class MusicPlayer {
-    private static Clip clip; // make clip static to share across instances
+public class MusicPlayer implements MusicPlayerInterface {
+    private Clip clip;
 
+    @Override
     public void play(String filePath) {
-        stop(); // Stop any currently playing music
+        new Thread(() -> {
+            try {
+                File audioFile = new File(filePath);
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(audioFile);
 
-        try {
-            File musicPath = new File(filePath);
+                if (clip != null && clip.isRunning()) {
+                    clip.stop();
+                    clip.close();
+                }
 
-            if (musicPath.exists()) {
-                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                 clip = AudioSystem.getClip();
                 clip.open(audioInput);
+                clip.loop(Clip.LOOP_CONTINUOUSLY); // loop continuously
                 clip.start();
-                clip.loop(Clip.LOOP_CONTINUOUSLY);
-            } else {
-                System.out.println("Can't find the music file: " + filePath);
+
+                
+
+            } catch (Exception e) {
+                System.out.println("Error playing music: " + e.getMessage());
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            System.out.println("Error playing music: " + e.getMessage());
-        }
+        }).start();
     }
 
+
+    @Override
     public void stop() {
-        try {
-            if (clip != null) {
-                if (clip.isRunning()) clip.stop();
-                clip.flush();
-                clip.close();
-                clip = null;
-            }
-        } catch (Exception e) {
-            System.out.println("Error stopping music: " + e.getMessage());
+        if (clip != null) {
+            if (clip.isRunning()) clip.stop();
+            clip.close();
+            clip = null;
         }
     }
 
+    @Override
     public void changeTrack(String filePath) {
         stop();
         play(filePath);
     }
 
+    @Override
     public boolean isPlaying() {
         return clip != null && clip.isRunning();
     }

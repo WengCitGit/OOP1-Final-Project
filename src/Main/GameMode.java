@@ -1,17 +1,17 @@
 package Main;
-import java.io.PrintStream;
-import java.nio.channels.Pipe.SourceChannel;
-import java.nio.charset.StandardCharsets;
+//import java.io.PrintStream;
+//import java.nio.channels.Pipe.SourceChannel;
+//import java.nio.charset.StandardCharsets;
 import java.util.*;
 import Battle.*;
 //import Characters.*; 
 import Characters.ChiefKhai;
     
     public class GameMode {
-        private MusicPlayer musicPlayer;
+        private MusicPlayerInterface musicPlayer;
         private static final String DEFAULT_BGM = "bgm.wav";
 
-        public GameMode(MusicPlayer music) {
+        public GameMode(MusicPlayerInterface music) {
             this.musicPlayer = music;
         }
 
