@@ -61,7 +61,8 @@ public class ArcadeMode extends Mode {
 
                 // ====== FIGHT NORMAL ENEMIES ======
                 for (String enemyName : enemyOrder) {
-                    printFinalBossBanner(playerName);
+                    printStageBanner(playerName, stage);
+
 
                     Characters.Character enemy = selector.getCharacterByName(enemyName.trim());
 

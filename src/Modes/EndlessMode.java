@@ -37,6 +37,7 @@ public class EndlessMode extends Mode {
             } while (enemy.getName().equals(player.getName()));
 
             // Display player and enemy names using helper method
+            displayStreakBanner(streak); 
             System.out.println("Matchup:");
             System.out.println(getDisplayWithCharacterName(player, playerName) + " VS " +
                                 getDisplayWithCharacterName(enemy, "Enemy"));
@@ -84,5 +85,13 @@ public class EndlessMode extends Mode {
         }
 
         displayGameOver();
+    }
+
+    private void displayStreakBanner(int streak){
+        System.out.println();
+        System.out.println("                                      ============================================================================");
+        System.out.println("                                                               ENDLESS MODE - STREAK: " + streak + "            ");
+        System.out.println("                                      ============================================================================");
+        System.out.println();
     }
 }
