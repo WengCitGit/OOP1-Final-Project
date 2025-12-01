@@ -163,26 +163,34 @@ public class MainSubclass {
 
     public boolean askPlayAgain() {
         while (true) {
-            try {
-                System.out.print("Would you like to play again? (y/n): ");
-                String choice = scan.nextLine().trim().toLowerCase();
-                if (choice.isEmpty()) continue;
+            System.out.print("Would you like to play again? (y/n): ");
+            if (!scan.hasNextLine()) {  
+                return false;
+            }
+            String choice = scan.nextLine().trim().toLowerCase();
 
-                char answer = choice.charAt(0);
-                if (answer == 'y') {
-                    music.stop();
-                    music.play("bgm.wav");
-                    return true;
-                } else if (answer == 'n') {
-                    exitGame();
-                } else {
-                    System.out.println("Invalid input! Please enter 'y' or 'n'.");
-                }
-            } catch (Exception e) {
-                System.out.println("An error occurred. Please try again.");
+            if (choice.isEmpty()) {
+                System.out.println("Please enter 'y' or 'n'.");
+                continue;
+            }
+
+            char answer = choice.charAt(0);
+
+            if (answer == 'y') {
+                music.stop();
+                music.play("bgm.wav");
+                return true;
+            } 
+            else if (answer == 'n') {
+                exitGame();
+                return false; 
+            } 
+            else {
+                System.out.println("Invalid input! Please enter 'y' or 'n'.");
             }
         }
     }
+
 
 
     public void waitForEnter() {
@@ -207,7 +215,6 @@ public class MainSubclass {
         System.out.println(EXIT_ASCII);
         System.out.println("\nSee you next time!\n");
         music.stop();
-        scan.close();
         System.exit(0);
     }
 }

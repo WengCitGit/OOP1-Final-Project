@@ -38,6 +38,6 @@ public class PVPMode extends Mode {
                 
                 displayGameOver();
 
-            scan.close();
+            
         }
 }
