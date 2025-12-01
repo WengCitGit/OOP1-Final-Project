@@ -16,12 +16,12 @@ public class LittleCaesars extends Character {
             // MANA COSTS
             0,     // basic mana cost
             15,    // secondary mana cost
-            28,    // ultimate mana cost
+            30,    // ultimate mana cost
 
             // DAMAGE VALUES
             12, 17,   // basic min-max dmg
             20, 30,   // secondary min-max dmg
-            34, 42    // ultimate min-max dmg
+            34, 52    // ultimate min-max dmg
         );
     }
 
