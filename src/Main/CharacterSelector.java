@@ -32,7 +32,7 @@ public class CharacterSelector {
             new ChiefKhai()
         };
 
-        // Set proper names (with your titles)
+        // Set ang proper names with titles
         for (int i = 0; i < chars.length; i++) {
             chars[i].setName(names[i]);
         }
@@ -63,7 +63,7 @@ public class CharacterSelector {
 
                 if (choice >= 1 && choice <= 8) break;
 
-                System.out.println("Invalid number! Please enter 1–8.\n");
+                System.out.println("Invalid number! Please enter 1-8.\n");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Numbers only.\n");
             }
@@ -82,14 +82,14 @@ public class CharacterSelector {
 
     public Characters.Character chooseRandomCharacter() {
 
-        int choice = 1 + (int)(Math.random() * 8); // Random number between 1 and 8
+        int choice = 1 + (int)(Math.random() * 8); 
 
         System.out.println();
         System.out.println("Computer has selected character " + choice + ". " + names[choice - 1] + ".");
         System.out.println();
 
         Characters.Character chosen = createCharacter(choice);
-        chosen.setName(names[choice - 1]); // ✅ update name to include title
+        chosen.setName(names[choice - 1]); // e update ang name with title
         return chosen;
 
     }
@@ -114,12 +114,12 @@ public class CharacterSelector {
 
         for (int i = 0; i < list.length; i++) {
 
-            // Exact match (full title, trimmed)
+            // Exact nga match
             if (list[i].getName().trim().equalsIgnoreCase(name.trim())) {
                 return list[i];
             }
 
-            // Match just the first word (e.g., "Jollibee")
+            // Match ang una nga word 
             String shortName = list[i].getName().split(" - ")[0];
 
             if (shortName.equalsIgnoreCase(name)) {

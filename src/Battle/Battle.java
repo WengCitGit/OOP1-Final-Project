@@ -10,10 +10,11 @@ public class Battle {
 
     //store cooldowns
     private Map<Character, int[]> cooldowns = new HashMap<>();
-    // Display names provided by users (e.g., "Alex") or "Computer"
+
     private String player1DisplayName;
     private String player2DisplayName;
 
+    //method overloading here
     public Battle(Character player1, Character player2) {
         this(player1, player2, false, "Player 1", "Player 2");
     }
@@ -56,7 +57,7 @@ public class Battle {
 
         while (round <= 3 && player1Wins < 2 && player2Wins < 2) {
 
-            // Reset HP and Mana at the start of each round
+            // Reset ang HP and Mana
             player1.restoreHP();
             player2.restoreHP();
             player1.restoreMana();
@@ -70,7 +71,7 @@ public class Battle {
             int turn = 1;
             boolean player1Starts = random.nextBoolean();
 
-            //announce who starts
+            //display kinsa mo start
             Character starter = player1Starts ? player1 : player2;
             System.out.println("First Turn: " + getDisplayWithCharacterName(starter));
 
@@ -93,20 +94,20 @@ public class Battle {
                 System.out.println(">>> " + getDisplayWithCharacterName(current) + "'s Turn! <<<");
                 showStats();
 
-                // 2. Get Move (Respecting Cooldowns)
+                // 2. Get Move sa player (Respecting Cooldowns)
                     int move;
                     if (isPVC && current == player2) {
-                        move = getComputerMove(current); // AI Logic
+                        move = getComputerMove(current); // AI 
                     } else {
-                        move = chooseMove(scanner, current); // Player Logic
+                        move = chooseMove(scanner, current); // Player 
                     }
 
-                    // 3. Perform Move
+                    // 3. Perform ang Move
                     performMoveWithBanner(current, opponent, move);
                     
                     applyCooldown(current, move);
 
-                // Random mana regen every after turns for each player
+                // Random nga mana regen every after turns for each player
                 if (turn % 2 == 0) {
                     int p1Regen = 5 + random.nextInt(6); 
                     int p2Regen = 5 + random.nextInt(6);
@@ -136,7 +137,7 @@ public class Battle {
 
             System.out.println("Score: " + getDisplayWithCharacterName(player1) + " " + player1Wins + " - " + player2Wins + " " + getDisplayWithCharacterName(player2));
             
-            // Only go to next round if no one has 2 wins yet
+            // tie breaker diri kung 1-1 na score
             if (player1Wins == 2 || player2Wins == 2) break;
 
             round++;
@@ -179,7 +180,7 @@ public class Battle {
         int[] cds = cooldowns.get(computer);
         List<Integer> validMoves = new ArrayList<>();
         
-        // Basic attack is always available
+        // Basic attack walay CD
         validMoves.add(1);
 
         // Check Secondary (Index 0)

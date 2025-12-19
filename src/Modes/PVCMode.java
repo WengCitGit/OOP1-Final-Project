@@ -34,6 +34,6 @@ public class PVCMode extends Mode {
 
             displayGameOver();
             
-            
+
         }
 }

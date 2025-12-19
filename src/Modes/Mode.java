@@ -4,7 +4,7 @@ import java.util.Scanner;
 import Main.MusicPlayerInterface;
 import Characters.Character;
 
-// Abstract base class for all game modes
+
 public abstract class Mode {
     protected MusicPlayerInterface musicPlayer;
     protected static final String DEFAULT_BGM = "bgm.wav";

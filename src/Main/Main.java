@@ -12,7 +12,7 @@ public class Main {
             music.play("bgm.wav");
         }
         
-        MainSubclass gameUI = new MainSubclass(scan, music);
+        MainManager gameUI = new MainManager(scan, music);
 
         gameUI.startGameLoop();
     }
